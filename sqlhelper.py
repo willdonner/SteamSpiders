@@ -19,4 +19,5 @@ class Sqlhelper(Singleton):
 
     def create_database(self):
         try:
+
             command =   'CREATE DATABASE IF NO EXISTS %s DEFAULT CHARACTER '
