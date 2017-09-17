@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="167d5703-819c-4a8a-9363-173dd6000b54" name="Default" comment="">
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gameurls.py" afterPath="$PROJECT_DIR$/gameurls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqlhelper.py" afterPath="$PROJECT_DIR$/sqlhelper.py" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
+>>>>>>> 87ff45131cdc109dc8c9760e4ab622a32877fc71
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,8 +23,13 @@
       <file leaf-file-name="gameurls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gameurls.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="457">
               <caret line="68" column="16" lean-forward="true" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
+=======
+            <state relative-caret-position="25">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+>>>>>>> 87ff45131cdc109dc8c9760e4ab622a32877fc71
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <marker date="1505643348093" expanded="true" signature="607:919" ph="CREATE TABLE... IF" />
@@ -30,6 +39,41 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+=======
+      <file leaf-file-name="sqlhelper.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sqlhelper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="17" column="51" lean-forward="false" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="singleton.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/singleton.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> 87ff45131cdc109dc8c9760e4ab622a32877fc71
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -46,9 +90,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/singleton.py" />
-        <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/sqlhelper.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/gameurls.py" />
+=======
+        <option value="$PROJECT_DIR$/config.py" />
+>>>>>>> 87ff45131cdc109dc8c9760e4ab622a32877fc71
       </list>
     </option>
   </component>
@@ -79,6 +126,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
+      <pane id="Scratches" />
+>>>>>>> 87ff45131cdc109dc8c9760e4ab622a32877fc71
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -91,7 +142,10 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+<<<<<<< HEAD
       <pane id="Scratches" />
+=======
+>>>>>>> 87ff45131cdc109dc8c9760e4ab622a32877fc71
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -127,13 +181,21 @@
       <option name="presentableId" value="Default" />
       <updated>1505214061610</updated>
     </task>
+    <task id="LOCAL-00001" summary="nothing">
+      <created>1505467418204</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1505467418204</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24270834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -160,6 +222,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="nothing" />
+    <option name="LAST_COMMIT_MESSAGE" value="nothing" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -167,7 +233,11 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/gameurls.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="22">
+=======
+        <state relative-caret-position="25">
+>>>>>>> 87ff45131cdc109dc8c9760e4ab622a32877fc71
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -179,13 +249,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="110">
+=======
+        <state relative-caret-position="125">
+>>>>>>> 87ff45131cdc109dc8c9760e4ab622a32877fc71
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/singleton.py">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
@@ -206,6 +281,28 @@
     <entry file="file://$PROJECT_DIR$/gameurls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
+=======
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqlhelper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameurls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+>>>>>>> 87ff45131cdc109dc8c9760e4ab622a32877fc71
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -217,7 +314,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="110">
+=======
+        <state relative-caret-position="125">
+>>>>>>> 87ff45131cdc109dc8c9760e4ab622a32877fc71
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
@@ -225,7 +326,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/singleton.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
+        <state relative-caret-position="150">
           <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
           <folding />
         </state>
@@ -233,7 +334,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sqlhelper.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="44">
+=======
+        <state relative-caret-position="50">
+>>>>>>> 87ff45131cdc109dc8c9760e4ab622a32877fc71
           <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
@@ -247,12 +352,16 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+<<<<<<< HEAD
             <marker date="1505643348093" expanded="true" signature="607:919" ph="CREATE TABLE... IF" />
             <marker date="1505643348093" expanded="true" signature="607:946" ph="CREATE TABLE... IF" />
+=======
+>>>>>>> 87ff45131cdc109dc8c9760e4ab622a32877fc71
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/utils/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -283,22 +392,40 @@
           <caret line="16" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
           <folding>
             <marker date="1488818774000" expanded="true" signature="1380:2834" ph="CREATE TABLE... IF" />
+=======
+    <entry file="file://$PROJECT_DIR$/gameurls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+>>>>>>> 87ff45131cdc109dc8c9760e4ab622a32877fc71
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/singleton.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="138">
           <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+=======
+        <state relative-caret-position="150">
+          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+>>>>>>> 87ff45131cdc109dc8c9760e4ab622a32877fc71
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sqlhelper.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="190">
           <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+=======
+        <state relative-caret-position="425">
+          <caret line="17" column="51" lean-forward="false" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+>>>>>>> 87ff45131cdc109dc8c9760e4ab622a32877fc71
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
@@ -307,12 +434,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="115">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+=======
+        <state relative-caret-position="175">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+>>>>>>> 87ff45131cdc109dc8c9760e4ab622a32877fc71
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/gameurls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
@@ -325,5 +458,7 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 87ff45131cdc109dc8c9760e4ab622a32877fc71
   </component>
 </project>

@@ -66,4 +66,3 @@ class GameUrls(Spider):
             count = 0
             for game in game_list:
                 sel = Selector(text=game)
-                
