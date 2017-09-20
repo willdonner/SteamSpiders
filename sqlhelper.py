@@ -21,7 +21,7 @@ class Sqlhelper(Singleton):
 
     def create_database(self):
         try:
-            command = 'CREATE DATABASE IF NO EXISTS %s DEFAULT CHARACTER \'utf8\'' % self.database_name
+            command = 'CREATE DATABASE IF NO EXISTS %s DEFAULT CHARACTER \'utf8\' ' % self.database_name
             utils.log('sql heler create_database command:%s' % command)
             self.cursor.execute(command)
         except Exception as e:

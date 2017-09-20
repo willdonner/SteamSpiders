@@ -1,8 +1,10 @@
 import re
+from unicodedata import name
+
 import config
 import utils
 
-from scrapy.spider import Spider
+from scrapy.spiders import Spider
 from scrapy import Request
 from scrapy.selector import Selector
 from sqlhelper import Sqlhelper
@@ -58,11 +60,56 @@ class GameUrls(Spider):
                 errback=self.error_parse,
             )
 
-        def parse_all(self, response):
-            print("")  # file_name = '%s/%s.html' % (self.dir_game, response.meta.get('page'))
-            # self.save_page(file_name, response.body)
-            self.log('parse_all url:%s'% response.url)
-            game_list = response.xpath('//div[@id="search_result_container"]/div[2]/a').extract()
-            count = 0
-            for game in game_list:
-                sel = Selector(text=game)
+    def parse_all(self, response):
+        print("")  # file_name = '%s/%s.html' % (self.dir_game, response.meta.get('page'))
+        # self.save_page(file_name, response.body)
+        self.log('parse_all url:%s' % response.url)
+        game_list = response.xpath('//div[@id="search_result_container"]/div[2]/a').extract()
+        count = 0
+        for game in game_list:
+            sel = Selector(text=game)
+            url = sel.xpath('//@href').extract_first()
+
+            id, type = self.get_id(url)
+            name = sel.xpath('//div[@class="col search_name ellipsis"]').extract_first()
+
+            msg = (None, type, name, url, 'no', response.meta.get('page'))
+            command = ("INSERT IGNORE INTO {}"
+                       "(id, type, name, url, is_crawled, page)"
+                       "VALUES(%s, %s, %s, %s, %s, %s)".format(config.steam_game_urls_table))
+            self.sql.insert_data(command, msg)
+
+    def error_parse(self, faiture):
+        request = faiture.request
+        utils.log('error_parse url:%s meta:%s' % (request.url, request.meta))
+
+    def get_id(self, url):
+        type = ''
+        if '/sub/' in url:
+            pattern = re.compile('/sub/(\d+)')
+            type = 'sub'
+        elif '/app/' in url:
+            pattern = re.compile('/sub(\d+)/', re.S)
+            type = 'app'
+        elif '/bundle/' in url:
+            pattern = re.compile('/sub(\d+)/', re.S)
+            type = 'bundle'
+        else:
+            pattern = re.compile('/sub(\d+)/', re.S)
+            type = 'other'
+            utils.log('get_id other url:%s' % url)
+
+        id = re.search(pattern, url)
+        if id:
+            id = id.group(1)
+            return id, type
+
+        utils.log('get_id error url:%s' % url)
+        return 0, 'error'
+    def save_page(self, file_name, data):
+        with open(file_name, 'w') as f:
+            f.write(data)
+            f.close()
+
+geturl = GameUrls()
+geturl.start_requests()
