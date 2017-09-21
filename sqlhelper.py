@@ -1,18 +1,19 @@
-from distutils import command
+#-*- coding: utf-8 -*-
 
 import logging
 import mysql.connector
 import utils
 import config
+
 from singleton import Singleton
 
 
-class Sqlhelper(Singleton):
+class SqlHelper(Singleton):
     def __init__(self):
         self.database_name = config.database_name
-        self.inti()
+        self.init()
 
-    def inti(self):
+    def init(self):
         self.database = mysql.connector.connect(**config.database_config)
         self.cursor = self.database.cursor()
 
@@ -21,29 +22,28 @@ class Sqlhelper(Singleton):
 
     def create_database(self):
         try:
-            command = 'CREATE DATABASE IF NO EXISTS %s DEFAULT CHARACTER \'utf8\' ' % self.database_name
-            utils.log('sql heler create_database command:%s' % command)
+            command = 'CREATE DATABASE IF NOT EXISTS %s DEFAULT CHARACTER SET \'utf8\' ' % self.database_name
+            utils.log('sql helper create_database command:%s' % command)
             self.cursor.execute(command)
         except Exception as e:
-            utils.log('sql helper create_database Exception:%s' % str(e),
-                      logging.warning('sql helper create_database Exception:%s' % str(e)))
+            utils.log('SqlHelper create_database exception:%s' % str(e), logging.WARNING)
 
-    def create_table(self,command):
+    def create_table(self, command):
         try:
-            utils.log('sql helper create_table command:%s'% command)
+            utils.log('sql helper create_table command:%s' % command)
             self.cursor.execute(command)
             self.database.commit()
         except Exception as e:
-            utils.log('sql helper create_table Exception:%s' % str(e)),
-            logging.warning('sql helper create_table Exception:%s' % str(e))
+            utils.log('sql helper create_table exception:%s' % str(e), logging.WARNING)
 
-    def insert_data(self, command):
+    def insert_data(self, command, data):
         try:
-            self.cursor.execute(command)
+            # utils.log('insert_data command:%s, data:%s' % (command, data))
+
+            self.cursor.execute(command, data)
             self.database.commit()
         except Exception as e:
-            utils.log('sql helper insert_data Exception:%s' % str(e)),
-            logging.warning('sql helper insert_data Exception:%s' % str(e))
+            utils.log('sql helper insert_data exception msg:%s' % str(e), logging.WARNING)
 
     def execute(self, command):
         try:
@@ -55,7 +55,7 @@ class Sqlhelper(Singleton):
             utils.log('sql helper execute exception msg:%s' % str(e))
             return None
 
-    def query(self, command): #查询全部
+    def query(self, command):
         try:
             utils.log('sql helper execute command:%s' % command)
 
@@ -67,7 +67,7 @@ class Sqlhelper(Singleton):
             utils.log('sql helper execute exception msg:%s' % str(e))
             return None
 
-    def query_one(self, command): #查询一条
+    def query_one(self, command):
         try:
             utils.log('sql helper execute command:%s' % command)
 
@@ -78,5 +78,3 @@ class Sqlhelper(Singleton):
         except Exception as e:
             utils.log('sql helper execute exception msg:%s' % str(e))
             return None
-
-
