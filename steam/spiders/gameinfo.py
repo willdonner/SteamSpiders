@@ -3,6 +3,6 @@ import config
 import utils
 
 from scrapy.spider import CrawlSpider
-from scrapy import Request, FormRequest
+
 
 
