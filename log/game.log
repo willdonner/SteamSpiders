@@ -7886,3 +7886,6 @@ INFO 2017-09-22 18:19:15,562: Dumping Scrapy stats:
  'scheduler/enqueued/memory': 1262,
  'start_time': datetime.datetime(2017, 9, 22, 10, 17, 6, 952701)}
 INFO 2017-09-22 18:19:15,562: Spider closed (finished)
+DEBUG 2017-10-11 17:39:30,487: *******************run spider start...*******************
+DEBUG 2017-10-11 17:43:58,684: *******************run spider start...*******************
+DEBUG 2017-10-11 17:44:09,869: *******************run spider start...*******************
