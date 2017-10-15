@@ -7055,3 +7055,105 @@ DEBUG 2017-10-13 16:39:32,535: parse_all url:http://store.steampowered.com/searc
 DEBUG 2017-10-13 16:39:32,640: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=15
 DEBUG 2017-10-13 16:39:32,727: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=20> (referer: None)
 DEBUG 2017-10-13 16:39:32,828: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=20
+DEBUG 2017-10-13 16:44:56,219: *******************run spider start...*******************
+INFO 2017-10-13 16:44:56,319: Scrapy 1.4.0 started (bot: steam)
+INFO 2017-10-13 16:44:56,319: Overridden settings: {'BOT_NAME': 'steam', 'NEWSPIDER_MODULE': 'steam.spiders', 'SPIDER_MODULES': ['steam.spiders']}
+INFO 2017-10-13 16:44:56,360: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+DEBUG 2017-10-13 16:44:56,366: sql helper create_database command:CREATE DATABASE IF NOT EXISTS steam DEFAULT CHARACTER SET 'utf8' 
+DEBUG 2017-10-13 16:44:56,366: sql helper create_table command:CREATE TABLE IF NOT EXISTS game_urls (`id` INT(8) NOT NULL AUTO_INCREMENT,`type` CHAR(10) NOT NULL,`name` TEXT NOT NULL,`url` TEXT NOT NULL,`is_crawled` CHAR(5) DEFAULT 'no',`page` INT(5) NOT NULL ,PRIMARY KEY(id)) ENGINE=InnoDB
+DEBUG 2017-10-13 16:44:56,369: make dir:log/game_urls
+INFO 2017-10-13 16:44:56,425: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO 2017-10-13 16:44:56,430: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO 2017-10-13 16:44:56,431: Enabled item pipelines:
+[]
+INFO 2017-10-13 16:44:56,431: Spider opened
+INFO 2017-10-13 16:44:56,439: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG 2017-10-13 16:44:56,440: Telnet console listening on 127.0.0.1:6023
+DEBUG 2017-10-13 16:44:58,546: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=5> (referer: None)
+DEBUG 2017-10-13 16:44:58,649: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=5
+DEBUG 2017-10-13 16:44:58,944: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=2> (referer: None)
+DEBUG 2017-10-13 16:44:59,033: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=8> (referer: None)
+DEBUG 2017-10-13 16:44:59,045: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=2
+DEBUG 2017-10-13 16:44:59,135: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=8
+DEBUG 2017-10-13 16:44:59,496: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=3> (referer: None)
+DEBUG 2017-10-13 16:44:59,601: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=3
+DEBUG 2017-10-13 16:44:59,798: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=1> (referer: None)
+DEBUG 2017-10-13 16:44:59,850: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=6> (referer: None)
+DEBUG 2017-10-13 16:44:59,900: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=4> (referer: None)
+DEBUG 2017-10-13 16:44:59,901: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=1
+DEBUG 2017-10-13 16:44:59,970: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=6
+DEBUG 2017-10-13 16:45:00,075: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=4
+DEBUG 2017-10-13 16:45:00,434: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=7> (referer: None)
+DEBUG 2017-10-13 16:45:00,535: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=7
+DEBUG 2017-10-13 16:45:00,672: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=11> (referer: None)
+DEBUG 2017-10-13 16:45:00,776: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=11
+DEBUG 2017-10-13 16:45:00,946: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=12> (referer: None)
+DEBUG 2017-10-13 16:45:01,047: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=12
+DEBUG 2017-10-13 16:45:01,586: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=13> (referer: None)
+DEBUG 2017-10-13 16:45:01,682: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=10> (referer: None)
+DEBUG 2017-10-13 16:45:01,687: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=13
+DEBUG 2017-10-13 16:45:01,753: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=14> (referer: None)
+DEBUG 2017-10-13 16:45:01,786: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=10
+DEBUG 2017-10-13 16:45:01,856: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=14
+DEBUG 2017-10-13 16:45:02,371: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=19> (referer: None)
+DEBUG 2017-10-13 16:45:02,420: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=17> (referer: None)
+DEBUG 2017-10-13 16:45:02,472: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=19
+DEBUG 2017-10-13 16:45:02,545: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=17
+DEBUG 2017-10-13 16:45:02,701: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=18> (referer: None)
+DEBUG 2017-10-13 16:45:02,707: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=20> (referer: None)
+DEBUG 2017-10-13 16:45:02,803: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=18
+DEBUG 2017-10-13 16:45:02,911: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=20
+DEBUG 2017-10-13 16:45:02,993: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=15> (referer: None)
+DEBUG 2017-10-13 16:45:03,098: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=15
+DEBUG 2017-10-13 16:45:03,394: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=9> (referer: None)
+DEBUG 2017-10-13 16:45:03,481: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=23> (referer: None)
+DEBUG 2017-10-13 16:45:03,495: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=9
+DEBUG 2017-10-13 16:45:03,583: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=23
+DEBUG 2017-10-13 16:45:03,650: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=16> (referer: None)
+DEBUG 2017-10-13 16:45:03,750: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=16
+DEBUG 2017-10-13 16:45:03,979: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=22> (referer: None)
+DEBUG 2017-10-13 16:45:04,067: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=28> (referer: None)
+DEBUG 2017-10-13 16:45:04,080: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=22
+DEBUG 2017-10-13 16:45:04,169: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=28
+DEBUG 2017-10-13 16:45:04,241: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=27> (referer: None)
+DEBUG 2017-10-13 16:45:04,258: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=21> (referer: None)
+DEBUG 2017-10-13 16:45:04,343: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=27
+DEBUG 2017-10-13 16:45:04,408: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=21
+DEBUG 2017-10-13 16:45:04,670: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=31> (referer: None)
+DEBUG 2017-10-13 16:45:04,719: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=26> (referer: None)
+DEBUG 2017-10-13 16:45:04,770: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=31
+DEBUG 2017-10-13 16:45:04,858: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=26
+DEBUG 2017-10-13 16:45:05,164: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=24> (referer: None)
+INFO 2017-10-13 16:45:05,187: Received SIG_UNBLOCK, shutting down gracefully. Send again to force 
+INFO 2017-10-13 16:45:05,188: Closing spider (shutdown)
+DEBUG 2017-10-13 16:45:05,267: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=24
+DEBUG 2017-10-13 16:45:05,437: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=34> (referer: None)
+DEBUG 2017-10-13 16:45:05,453: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=30> (referer: None)
+DEBUG 2017-10-13 16:45:05,541: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=34
+DEBUG 2017-10-13 16:45:05,596: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=30
+DEBUG 2017-10-13 16:45:06,253: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=38> (referer: None)
+DEBUG 2017-10-13 16:45:06,316: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=32> (referer: None)
+DEBUG 2017-10-13 16:45:06,354: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=38
+DEBUG 2017-10-13 16:45:06,420: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&page=32
+DEBUG 2017-10-13 16:45:06,508: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=25> (referer: None)
+DEBUG 2017-10-13 16:45:06,520: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&page=29> (referer: None)
