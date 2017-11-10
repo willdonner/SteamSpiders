@@ -4,7 +4,7 @@ database_name = 'steam'
 
 steam_game_info_table = 'game_info'
 
-steam_game_urls_table = 'game_urls'
+steam_game_urls_table = 'only_game_urls'
 
 database_config = {
     'host': 'localhost',

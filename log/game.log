@@ -1,0 +1,1460 @@
+DEBUG 2017-11-10 08:43:05,240: *******************run spider start...*******************
+INFO 2017-11-10 08:43:05,343: Scrapy 1.4.0 started (bot: steam)
+INFO 2017-11-10 08:43:05,343: Overridden settings: {'BOT_NAME': 'steam', 'NEWSPIDER_MODULE': 'steam.spiders', 'SPIDER_MODULES': ['steam.spiders']}
+INFO 2017-11-10 08:43:05,401: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+DEBUG 2017-11-10 08:43:05,420: sql helper create_database command:CREATE DATABASE IF NOT EXISTS steam DEFAULT CHARACTER SET 'utf8' 
+DEBUG 2017-11-10 08:43:05,423: sql helper create_table command:CREATE TABLE IF NOT EXISTS only_game_urls (`id` INT(8) NOT NULL AUTO_INCREMENT,`type` CHAR(10) NOT NULL,`name` TEXT NOT NULL,`url` TEXT NOT NULL,`is_crawled` CHAR(5) DEFAULT 'no',`page` INT(5) NOT NULL ,PRIMARY KEY(id)) ENGINE=InnoDB
+DEBUG 2017-11-10 08:43:05,466: make dir:log/game_urls
+INFO 2017-11-10 08:43:05,606: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO 2017-11-10 08:43:05,612: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO 2017-11-10 08:43:05,613: Enabled item pipelines:
+[]
+INFO 2017-11-10 08:43:05,614: Spider opened
+INFO 2017-11-10 08:43:05,626: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG 2017-11-10 08:43:05,627: Telnet console listening on 127.0.0.1:6023
+DEBUG 2017-11-10 08:43:06,656: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=2> (referer: None)
+DEBUG 2017-11-10 08:43:06,668: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=4> (referer: None)
+DEBUG 2017-11-10 08:43:06,693: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=1> (referer: None)
+DEBUG 2017-11-10 08:43:06,761: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=2
+DEBUG 2017-11-10 08:43:06,839: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=4
+DEBUG 2017-11-10 08:43:06,918: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=1
+DEBUG 2017-11-10 08:43:06,993: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=3> (referer: None)
+DEBUG 2017-11-10 08:43:06,997: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=6> (referer: None)
+DEBUG 2017-11-10 08:43:07,002: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=8> (referer: None)
+DEBUG 2017-11-10 08:43:07,006: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=7> (referer: None)
+DEBUG 2017-11-10 08:43:07,010: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=5> (referer: None)
+DEBUG 2017-11-10 08:43:07,097: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=3
+DEBUG 2017-11-10 08:43:07,162: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=6
+DEBUG 2017-11-10 08:43:07,227: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=8
+DEBUG 2017-11-10 08:43:07,289: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=7
+DEBUG 2017-11-10 08:43:07,350: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=5
+DEBUG 2017-11-10 08:43:07,425: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=10> (referer: None)
+DEBUG 2017-11-10 08:43:07,429: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=9> (referer: None)
+DEBUG 2017-11-10 08:43:07,432: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=11> (referer: None)
+DEBUG 2017-11-10 08:43:07,528: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=10
+DEBUG 2017-11-10 08:43:07,580: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=13> (referer: None)
+DEBUG 2017-11-10 08:43:07,580: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=9
+DEBUG 2017-11-10 08:43:07,634: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=11
+DEBUG 2017-11-10 08:43:07,706: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=14> (referer: None)
+DEBUG 2017-11-10 08:43:07,709: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=15> (referer: None)
+DEBUG 2017-11-10 08:43:07,713: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=16> (referer: None)
+DEBUG 2017-11-10 08:43:07,715: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=13
+DEBUG 2017-11-10 08:43:07,807: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=14
+DEBUG 2017-11-10 08:43:07,881: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=15
+DEBUG 2017-11-10 08:43:07,948: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=16
+DEBUG 2017-11-10 08:43:08,023: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=17> (referer: None)
+DEBUG 2017-11-10 08:43:08,039: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=19> (referer: None)
+DEBUG 2017-11-10 08:43:08,052: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=18> (referer: None)
+DEBUG 2017-11-10 08:43:08,061: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=12> (referer: None)
+DEBUG 2017-11-10 08:43:08,128: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=17
+DEBUG 2017-11-10 08:43:08,226: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=19
+DEBUG 2017-11-10 08:43:08,288: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=18
+DEBUG 2017-11-10 08:43:08,356: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=12
+DEBUG 2017-11-10 08:43:08,429: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=20> (referer: None)
+DEBUG 2017-11-10 08:43:08,432: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=22> (referer: None)
+DEBUG 2017-11-10 08:43:08,435: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=23> (referer: None)
+DEBUG 2017-11-10 08:43:08,468: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=21> (referer: None)
+DEBUG 2017-11-10 08:43:08,530: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=20
+DEBUG 2017-11-10 08:43:08,600: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=22
+DEBUG 2017-11-10 08:43:08,677: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=23
+DEBUG 2017-11-10 08:43:08,747: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=21
+DEBUG 2017-11-10 08:43:08,807: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=26> (referer: None)
+DEBUG 2017-11-10 08:43:08,811: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=25> (referer: None)
+DEBUG 2017-11-10 08:43:08,877: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=24> (referer: None)
+DEBUG 2017-11-10 08:43:08,895: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=27> (referer: None)
+DEBUG 2017-11-10 08:43:08,910: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=26
+DEBUG 2017-11-10 08:43:08,979: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=29> (referer: None)
+DEBUG 2017-11-10 08:43:08,980: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=25
+DEBUG 2017-11-10 08:43:09,053: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=24
+DEBUG 2017-11-10 08:43:09,125: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=28> (referer: None)
+DEBUG 2017-11-10 08:43:09,128: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=31> (referer: None)
+DEBUG 2017-11-10 08:43:09,132: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=30> (referer: None)
+DEBUG 2017-11-10 08:43:09,132: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=27
+DEBUG 2017-11-10 08:43:09,191: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=29
+DEBUG 2017-11-10 08:43:09,251: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=28
+DEBUG 2017-11-10 08:43:09,319: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=31
+DEBUG 2017-11-10 08:43:09,394: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=30
+DEBUG 2017-11-10 08:43:09,469: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=32> (referer: None)
+DEBUG 2017-11-10 08:43:09,472: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=33> (referer: None)
+DEBUG 2017-11-10 08:43:09,493: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=34> (referer: None)
+DEBUG 2017-11-10 08:43:09,550: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=35> (referer: None)
+DEBUG 2017-11-10 08:43:09,572: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=32
+DEBUG 2017-11-10 08:43:09,721: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=36> (referer: None)
+DEBUG 2017-11-10 08:43:09,722: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=33
+DEBUG 2017-11-10 08:43:09,786: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=34
+DEBUG 2017-11-10 08:43:09,855: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=35
+DEBUG 2017-11-10 08:43:09,922: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=37> (referer: None)
+DEBUG 2017-11-10 08:43:09,925: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=38> (referer: None)
+DEBUG 2017-11-10 08:43:09,928: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=39> (referer: None)
+DEBUG 2017-11-10 08:43:09,930: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=36
+DEBUG 2017-11-10 08:43:10,023: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=37
+DEBUG 2017-11-10 08:43:10,100: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=42> (referer: None)
+DEBUG 2017-11-10 08:43:10,103: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=40> (referer: None)
+DEBUG 2017-11-10 08:43:10,106: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=41> (referer: None)
+DEBUG 2017-11-10 08:43:10,106: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=38
+DEBUG 2017-11-10 08:43:10,167: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=39
+DEBUG 2017-11-10 08:43:10,225: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=43> (referer: None)
+DEBUG 2017-11-10 08:43:10,227: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=42
+DEBUG 2017-11-10 08:43:10,290: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=40
+DEBUG 2017-11-10 08:43:10,359: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=41
+DEBUG 2017-11-10 08:43:10,425: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=43
+DEBUG 2017-11-10 08:43:10,492: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=44> (referer: None)
+DEBUG 2017-11-10 08:43:10,593: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=44
+DEBUG 2017-11-10 08:43:10,665: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=45> (referer: None)
+DEBUG 2017-11-10 08:43:10,668: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=47> (referer: None)
+DEBUG 2017-11-10 08:43:10,751: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=49> (referer: None)
+DEBUG 2017-11-10 08:43:10,766: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=45
+DEBUG 2017-11-10 08:43:10,841: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=48> (referer: None)
+DEBUG 2017-11-10 08:43:10,845: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=50> (referer: None)
+DEBUG 2017-11-10 08:43:10,846: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=47
+DEBUG 2017-11-10 08:43:10,939: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=46> (referer: None)
+DEBUG 2017-11-10 08:43:10,939: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=49
+DEBUG 2017-11-10 08:43:11,011: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=51> (referer: None)
+DEBUG 2017-11-10 08:43:11,011: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=48
+DEBUG 2017-11-10 08:43:11,071: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=50
+DEBUG 2017-11-10 08:43:11,128: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=46
+DEBUG 2017-11-10 08:43:11,191: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=51
+DEBUG 2017-11-10 08:43:11,259: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=53> (referer: None)
+DEBUG 2017-11-10 08:43:11,302: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=52> (referer: None)
+DEBUG 2017-11-10 08:43:11,316: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=54> (referer: None)
+DEBUG 2017-11-10 08:43:11,360: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=53
+DEBUG 2017-11-10 08:43:11,472: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=55> (referer: None)
+DEBUG 2017-11-10 08:43:11,473: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=52
+DEBUG 2017-11-10 08:43:11,620: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=54
+DEBUG 2017-11-10 08:43:11,699: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=56> (referer: None)
+DEBUG 2017-11-10 08:43:11,702: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=58> (referer: None)
+DEBUG 2017-11-10 08:43:11,708: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=57> (referer: None)
+DEBUG 2017-11-10 08:43:11,709: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=55
+DEBUG 2017-11-10 08:43:11,782: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=60> (referer: None)
+DEBUG 2017-11-10 08:43:11,796: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=59> (referer: None)
+DEBUG 2017-11-10 08:43:11,800: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=56
+DEBUG 2017-11-10 08:43:11,862: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=58
+DEBUG 2017-11-10 08:43:11,974: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=57
+DEBUG 2017-11-10 08:43:12,105: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=61> (referer: None)
+DEBUG 2017-11-10 08:43:12,109: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=62> (referer: None)
+DEBUG 2017-11-10 08:43:12,109: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=60
+DEBUG 2017-11-10 08:43:12,170: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=59
+DEBUG 2017-11-10 08:43:12,245: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=61
+DEBUG 2017-11-10 08:43:12,313: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=62
+DEBUG 2017-11-10 08:43:12,407: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=67> (referer: None)
+DEBUG 2017-11-10 08:43:12,425: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=68> (referer: None)
+DEBUG 2017-11-10 08:43:12,479: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=66> (referer: None)
+DEBUG 2017-11-10 08:43:12,511: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=67
+DEBUG 2017-11-10 08:43:12,583: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=68
+DEBUG 2017-11-10 08:43:12,643: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=66
+DEBUG 2017-11-10 08:43:12,817: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=69> (referer: None)
+DEBUG 2017-11-10 08:43:12,877: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=70> (referer: None)
+DEBUG 2017-11-10 08:43:12,886: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=63> (referer: None)
+DEBUG 2017-11-10 08:43:12,921: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=69
+DEBUG 2017-11-10 08:43:12,991: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=71> (referer: None)
+DEBUG 2017-11-10 08:43:12,995: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=65> (referer: None)
+DEBUG 2017-11-10 08:43:12,995: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=70
+DEBUG 2017-11-10 08:43:13,062: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=63
+DEBUG 2017-11-10 08:43:13,144: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=72> (referer: None)
+DEBUG 2017-11-10 08:43:13,147: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=73> (referer: None)
+DEBUG 2017-11-10 08:43:13,149: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=71
+DEBUG 2017-11-10 08:43:13,225: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=65
+DEBUG 2017-11-10 08:43:13,300: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=72
+DEBUG 2017-11-10 08:43:13,383: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=73
+DEBUG 2017-11-10 08:43:13,467: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=64> (referer: None)
+DEBUG 2017-11-10 08:43:13,470: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=74> (referer: None)
+DEBUG 2017-11-10 08:43:13,572: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=64
+DEBUG 2017-11-10 08:43:13,643: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=74
+DEBUG 2017-11-10 08:43:13,768: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=78> (referer: None)
+DEBUG 2017-11-10 08:43:13,827: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=79> (referer: None)
+DEBUG 2017-11-10 08:43:13,858: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=75> (referer: None)
+DEBUG 2017-11-10 08:43:13,868: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=78
+DEBUG 2017-11-10 08:43:13,944: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=77> (referer: None)
+DEBUG 2017-11-10 08:43:13,946: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=76> (referer: None)
+DEBUG 2017-11-10 08:43:13,947: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=79
+DEBUG 2017-11-10 08:43:14,038: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=80> (referer: None)
+DEBUG 2017-11-10 08:43:14,043: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=82> (referer: None)
+DEBUG 2017-11-10 08:43:14,043: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=75
+DEBUG 2017-11-10 08:43:14,153: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=81> (referer: None)
+DEBUG 2017-11-10 08:43:14,153: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=77
+DEBUG 2017-11-10 08:43:14,213: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=76
+DEBUG 2017-11-10 08:43:14,289: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=80
+DEBUG 2017-11-10 08:43:14,376: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=82
+DEBUG 2017-11-10 08:43:14,456: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=84> (referer: None)
+DEBUG 2017-11-10 08:43:14,459: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=83> (referer: None)
+DEBUG 2017-11-10 08:43:14,462: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=85> (referer: None)
+DEBUG 2017-11-10 08:43:14,464: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=81
+DEBUG 2017-11-10 08:43:14,558: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=84
+DEBUG 2017-11-10 08:43:14,636: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=86> (referer: None)
+DEBUG 2017-11-10 08:43:14,639: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=87> (referer: None)
+DEBUG 2017-11-10 08:43:14,639: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=83
+DEBUG 2017-11-10 08:43:14,711: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=85
+DEBUG 2017-11-10 08:43:14,793: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=88> (referer: None)
+DEBUG 2017-11-10 08:43:14,800: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=89> (referer: None)
+DEBUG 2017-11-10 08:43:14,810: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=86
+DEBUG 2017-11-10 08:43:14,918: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=87
+DEBUG 2017-11-10 08:43:15,024: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=90> (referer: None)
+DEBUG 2017-11-10 08:43:15,025: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=88
+DEBUG 2017-11-10 08:43:15,122: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=89
+DEBUG 2017-11-10 08:43:15,214: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=91> (referer: None)
+DEBUG 2017-11-10 08:43:15,217: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=92> (referer: None)
+DEBUG 2017-11-10 08:43:15,222: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=93> (referer: None)
+DEBUG 2017-11-10 08:43:15,224: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=90
+DEBUG 2017-11-10 08:43:15,350: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=91
+DEBUG 2017-11-10 08:43:15,424: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=92
+DEBUG 2017-11-10 08:43:15,493: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=93
+DEBUG 2017-11-10 08:43:15,573: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=94> (referer: None)
+DEBUG 2017-11-10 08:43:15,577: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=95> (referer: None)
+DEBUG 2017-11-10 08:43:15,598: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=96> (referer: None)
+DEBUG 2017-11-10 08:43:15,619: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=97> (referer: None)
+DEBUG 2017-11-10 08:43:15,678: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=94
+DEBUG 2017-11-10 08:43:15,752: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=95
+DEBUG 2017-11-10 08:43:15,831: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=96
+DEBUG 2017-11-10 08:43:15,902: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=97
+DEBUG 2017-11-10 08:43:15,985: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=98> (referer: None)
+DEBUG 2017-11-10 08:43:16,011: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=100> (referer: None)
+DEBUG 2017-11-10 08:43:16,088: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=98
+DEBUG 2017-11-10 08:43:16,152: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=100
+DEBUG 2017-11-10 08:43:16,214: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=104> (referer: None)
+DEBUG 2017-11-10 08:43:16,217: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=105> (referer: None)
+DEBUG 2017-11-10 08:43:16,276: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=101> (referer: None)
+DEBUG 2017-11-10 08:43:16,285: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=102> (referer: None)
+DEBUG 2017-11-10 08:43:16,316: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=104
+DEBUG 2017-11-10 08:43:16,433: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=103> (referer: None)
+DEBUG 2017-11-10 08:43:16,434: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=105
+DEBUG 2017-11-10 08:43:16,496: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=101
+DEBUG 2017-11-10 08:43:16,566: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=102
+DEBUG 2017-11-10 08:43:16,641: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=99> (referer: None)
+DEBUG 2017-11-10 08:43:16,644: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=107> (referer: None)
+DEBUG 2017-11-10 08:43:16,647: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=103
+DEBUG 2017-11-10 08:43:16,716: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=106> (referer: None)
+DEBUG 2017-11-10 08:43:16,744: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=99
+DEBUG 2017-11-10 08:43:16,823: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=107
+DEBUG 2017-11-10 08:43:16,902: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=106
+DEBUG 2017-11-10 08:43:17,001: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=109> (referer: None)
+DEBUG 2017-11-10 08:43:17,004: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=110> (referer: None)
+DEBUG 2017-11-10 08:43:17,102: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=109
+DEBUG 2017-11-10 08:43:17,167: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=111> (referer: None)
+DEBUG 2017-11-10 08:43:17,170: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=108> (referer: None)
+DEBUG 2017-11-10 08:43:17,171: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=110
+DEBUG 2017-11-10 08:43:17,268: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=115> (referer: None)
+DEBUG 2017-11-10 08:43:17,268: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=111
+DEBUG 2017-11-10 08:43:17,340: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=113> (referer: None)
+DEBUG 2017-11-10 08:43:17,340: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=108
+DEBUG 2017-11-10 08:43:17,422: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=115
+DEBUG 2017-11-10 08:43:17,481: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=113
+DEBUG 2017-11-10 08:43:17,560: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=116> (referer: None)
+DEBUG 2017-11-10 08:43:17,585: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=117> (referer: None)
+DEBUG 2017-11-10 08:43:17,623: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=114> (referer: None)
+DEBUG 2017-11-10 08:43:17,663: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=116
+DEBUG 2017-11-10 08:43:17,725: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=117
+DEBUG 2017-11-10 08:43:17,782: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=114
+DEBUG 2017-11-10 08:43:18,042: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=121> (referer: None)
+DEBUG 2017-11-10 08:43:18,045: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=120> (referer: None)
+DEBUG 2017-11-10 08:43:18,047: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=118> (referer: None)
+DEBUG 2017-11-10 08:43:18,050: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=112> (referer: None)
+DEBUG 2017-11-10 08:43:18,053: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=119> (referer: None)
+DEBUG 2017-11-10 08:43:18,117: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=122> (referer: None)
+DEBUG 2017-11-10 08:43:18,143: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=121
+DEBUG 2017-11-10 08:43:18,206: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=123> (referer: None)
+DEBUG 2017-11-10 08:43:18,206: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=120
+DEBUG 2017-11-10 08:43:18,267: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=118
+DEBUG 2017-11-10 08:43:18,345: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=112
+DEBUG 2017-11-10 08:43:18,409: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=119
+DEBUG 2017-11-10 08:43:18,481: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=124> (referer: None)
+DEBUG 2017-11-10 08:43:18,481: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=122
+DEBUG 2017-11-10 08:43:18,544: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=123
+DEBUG 2017-11-10 08:43:18,606: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=124
+DEBUG 2017-11-10 08:43:18,959: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=127> (referer: None)
+DEBUG 2017-11-10 08:43:18,963: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=130> (referer: None)
+DEBUG 2017-11-10 08:43:18,976: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=129> (referer: None)
+DEBUG 2017-11-10 08:43:19,056: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=125> (referer: None)
+DEBUG 2017-11-10 08:43:19,061: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=127
+DEBUG 2017-11-10 08:43:19,129: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=131> (referer: None)
+DEBUG 2017-11-10 08:43:19,129: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=130
+DEBUG 2017-11-10 08:43:19,197: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=129
+DEBUG 2017-11-10 08:43:19,290: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=126> (referer: None)
+DEBUG 2017-11-10 08:43:19,293: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=132> (referer: None)
+DEBUG 2017-11-10 08:43:19,294: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=125
+DEBUG 2017-11-10 08:43:19,363: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=131
+DEBUG 2017-11-10 08:43:19,444: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=128> (referer: None)
+DEBUG 2017-11-10 08:43:19,448: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=126
+DEBUG 2017-11-10 08:43:19,534: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=132
+DEBUG 2017-11-10 08:43:19,602: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=134> (referer: None)
+DEBUG 2017-11-10 08:43:19,604: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=128
+DEBUG 2017-11-10 08:43:19,680: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=136> (referer: None)
+DEBUG 2017-11-10 08:43:19,684: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=133> (referer: None)
+DEBUG 2017-11-10 08:43:19,687: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=135> (referer: None)
+DEBUG 2017-11-10 08:43:19,703: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=134
+DEBUG 2017-11-10 08:43:19,781: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=136
+DEBUG 2017-11-10 08:43:19,836: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=133
+DEBUG 2017-11-10 08:43:19,896: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=135
+DEBUG 2017-11-10 08:43:20,079: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=138> (referer: None)
+DEBUG 2017-11-10 08:43:20,181: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=138
+DEBUG 2017-11-10 08:43:20,276: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=142> (referer: None)
+DEBUG 2017-11-10 08:43:20,280: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=140> (referer: None)
+DEBUG 2017-11-10 08:43:20,284: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=141> (referer: None)
+DEBUG 2017-11-10 08:43:20,292: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=144> (referer: None)
+DEBUG 2017-11-10 08:43:20,379: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=142
+DEBUG 2017-11-10 08:43:20,513: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=139> (referer: None)
+DEBUG 2017-11-10 08:43:20,516: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=137> (referer: None)
+DEBUG 2017-11-10 08:43:20,517: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=140
+DEBUG 2017-11-10 08:43:20,589: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=141
+DEBUG 2017-11-10 08:43:20,661: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=144
+DEBUG 2017-11-10 08:43:20,779: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=145> (referer: None)
+DEBUG 2017-11-10 08:43:20,786: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=143> (referer: None)
+DEBUG 2017-11-10 08:43:20,795: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=139
+DEBUG 2017-11-10 08:43:20,874: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=137
+DEBUG 2017-11-10 08:43:20,976: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=146> (referer: None)
+DEBUG 2017-11-10 08:43:20,994: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=147> (referer: None)
+DEBUG 2017-11-10 08:43:21,000: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=149> (referer: None)
+DEBUG 2017-11-10 08:43:21,010: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=148> (referer: None)
+DEBUG 2017-11-10 08:43:21,013: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=145
+DEBUG 2017-11-10 08:43:21,077: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=143
+DEBUG 2017-11-10 08:43:21,168: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=146
+DEBUG 2017-11-10 08:43:21,308: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=147
+DEBUG 2017-11-10 08:43:21,375: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=149
+DEBUG 2017-11-10 08:43:21,550: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=148
+DEBUG 2017-11-10 08:43:21,641: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=152> (referer: None)
+DEBUG 2017-11-10 08:43:21,644: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=153> (referer: None)
+DEBUG 2017-11-10 08:43:21,649: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=150> (referer: None)
+DEBUG 2017-11-10 08:43:21,656: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=151> (referer: None)
+DEBUG 2017-11-10 08:43:21,742: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=152
+DEBUG 2017-11-10 08:43:21,860: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=154> (referer: None)
+DEBUG 2017-11-10 08:43:21,873: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=155> (referer: None)
+DEBUG 2017-11-10 08:43:21,886: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=156> (referer: None)
+DEBUG 2017-11-10 08:43:21,890: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=157> (referer: None)
+DEBUG 2017-11-10 08:43:21,891: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=153
+DEBUG 2017-11-10 08:43:21,972: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=150
+DEBUG 2017-11-10 08:43:22,100: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=151
+DEBUG 2017-11-10 08:43:22,194: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=154
+DEBUG 2017-11-10 08:43:22,254: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=155
+DEBUG 2017-11-10 08:43:22,309: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=156
+DEBUG 2017-11-10 08:43:22,370: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=157
+DEBUG 2017-11-10 08:43:22,437: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=159> (referer: None)
+DEBUG 2017-11-10 08:43:22,440: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=160> (referer: None)
+DEBUG 2017-11-10 08:43:22,444: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=161> (referer: None)
+DEBUG 2017-11-10 08:43:22,541: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=159
+DEBUG 2017-11-10 08:43:22,599: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=160
+DEBUG 2017-11-10 08:43:22,662: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=161
+DEBUG 2017-11-10 08:43:22,987: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=163> (referer: None)
+DEBUG 2017-11-10 08:43:23,055: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=166> (referer: None)
+DEBUG 2017-11-10 08:43:23,080: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=164> (referer: None)
+DEBUG 2017-11-10 08:43:23,083: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=158> (referer: None)
+DEBUG 2017-11-10 08:43:23,088: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=163
+DEBUG 2017-11-10 08:43:23,146: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=167> (referer: None)
+DEBUG 2017-11-10 08:43:23,150: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=162> (referer: None)
+DEBUG 2017-11-10 08:43:23,157: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=166
+DEBUG 2017-11-10 08:43:23,216: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=164
+DEBUG 2017-11-10 08:43:23,295: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=158
+DEBUG 2017-11-10 08:43:23,359: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=165> (referer: None)
+DEBUG 2017-11-10 08:43:23,362: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=168> (referer: None)
+DEBUG 2017-11-10 08:43:23,363: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=167
+DEBUG 2017-11-10 08:43:23,420: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=162
+DEBUG 2017-11-10 08:43:23,560: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=165
+DEBUG 2017-11-10 08:43:23,673: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=168
+DEBUG 2017-11-10 08:43:23,756: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=172> (referer: None)
+DEBUG 2017-11-10 08:43:23,760: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=170> (referer: None)
+DEBUG 2017-11-10 08:43:23,764: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=169> (referer: None)
+DEBUG 2017-11-10 08:43:23,777: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=173> (referer: None)
+DEBUG 2017-11-10 08:43:23,785: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=171> (referer: None)
+DEBUG 2017-11-10 08:43:23,796: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=174> (referer: None)
+DEBUG 2017-11-10 08:43:23,861: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=172
+DEBUG 2017-11-10 08:43:23,948: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=170
+DEBUG 2017-11-10 08:43:24,039: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=169
+DEBUG 2017-11-10 08:43:24,113: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=173
+DEBUG 2017-11-10 08:43:24,165: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=171
+DEBUG 2017-11-10 08:43:24,220: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=174
+DEBUG 2017-11-10 08:43:24,298: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=175> (referer: None)
+DEBUG 2017-11-10 08:43:24,302: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=176> (referer: None)
+DEBUG 2017-11-10 08:43:24,316: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=179> (referer: None)
+DEBUG 2017-11-10 08:43:24,355: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=180> (referer: None)
+DEBUG 2017-11-10 08:43:24,368: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=181> (referer: None)
+DEBUG 2017-11-10 08:43:24,384: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=177> (referer: None)
+DEBUG 2017-11-10 08:43:24,399: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=175
+DEBUG 2017-11-10 08:43:24,464: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=182> (referer: None)
+DEBUG 2017-11-10 08:43:24,466: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=178> (referer: None)
+DEBUG 2017-11-10 08:43:24,467: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=176
+DEBUG 2017-11-10 08:43:24,531: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=179
+DEBUG 2017-11-10 08:43:24,592: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=180
+DEBUG 2017-11-10 08:43:24,647: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=181
+DEBUG 2017-11-10 08:43:24,697: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=177
+DEBUG 2017-11-10 08:43:24,754: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=182
+DEBUG 2017-11-10 08:43:24,809: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=178
+DEBUG 2017-11-10 08:43:24,894: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=184> (referer: None)
+DEBUG 2017-11-10 08:43:24,898: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=185> (referer: None)
+DEBUG 2017-11-10 08:43:24,909: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=186> (referer: None)
+DEBUG 2017-11-10 08:43:24,953: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=187> (referer: None)
+DEBUG 2017-11-10 08:43:24,965: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=188> (referer: None)
+DEBUG 2017-11-10 08:43:24,999: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=184
+DEBUG 2017-11-10 08:43:25,068: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=185
+DEBUG 2017-11-10 08:43:25,121: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=186
+DEBUG 2017-11-10 08:43:25,170: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=187
+DEBUG 2017-11-10 08:43:25,235: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=188
+DEBUG 2017-11-10 08:43:25,304: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=189> (referer: None)
+DEBUG 2017-11-10 08:43:25,308: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=190> (referer: None)
+DEBUG 2017-11-10 08:43:25,409: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=189
+DEBUG 2017-11-10 08:43:25,492: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=190
+DEBUG 2017-11-10 08:43:25,560: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=195> (referer: None)
+DEBUG 2017-11-10 08:43:25,564: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=183> (referer: None)
+DEBUG 2017-11-10 08:43:25,567: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=191> (referer: None)
+DEBUG 2017-11-10 08:43:25,642: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=193> (referer: None)
+DEBUG 2017-11-10 08:43:25,649: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=194> (referer: None)
+DEBUG 2017-11-10 08:43:25,665: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=192> (referer: None)
+DEBUG 2017-11-10 08:43:25,665: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=195
+DEBUG 2017-11-10 08:43:25,742: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=183
+DEBUG 2017-11-10 08:43:25,818: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=191
+DEBUG 2017-11-10 08:43:25,884: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=193
+DEBUG 2017-11-10 08:43:25,966: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=194
+DEBUG 2017-11-10 08:43:26,272: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=192
+DEBUG 2017-11-10 08:43:26,339: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=196> (referer: None)
+DEBUG 2017-11-10 08:43:26,342: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=198> (referer: None)
+DEBUG 2017-11-10 08:43:26,345: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=197> (referer: None)
+DEBUG 2017-11-10 08:43:26,434: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=202> (referer: None)
+DEBUG 2017-11-10 08:43:26,440: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=196
+DEBUG 2017-11-10 08:43:26,527: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=203> (referer: None)
+DEBUG 2017-11-10 08:43:26,534: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=201> (referer: None)
+DEBUG 2017-11-10 08:43:26,537: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=200> (referer: None)
+DEBUG 2017-11-10 08:43:26,537: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=198
+DEBUG 2017-11-10 08:43:26,599: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=197
+DEBUG 2017-11-10 08:43:26,655: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=202
+DEBUG 2017-11-10 08:43:26,714: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=199> (referer: None)
+DEBUG 2017-11-10 08:43:26,717: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=203
+DEBUG 2017-11-10 08:43:26,823: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=201
+DEBUG 2017-11-10 08:43:26,888: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=200
+DEBUG 2017-11-10 08:43:26,968: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=204> (referer: None)
+DEBUG 2017-11-10 08:43:26,971: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=206> (referer: None)
+DEBUG 2017-11-10 08:43:26,976: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=199
+DEBUG 2017-11-10 08:43:27,054: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=205> (referer: None)
+DEBUG 2017-11-10 08:43:27,068: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=204
+DEBUG 2017-11-10 08:43:27,135: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=207> (referer: None)
+DEBUG 2017-11-10 08:43:27,135: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=206
+DEBUG 2017-11-10 08:43:27,199: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=205
+DEBUG 2017-11-10 08:43:27,272: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=207
+DEBUG 2017-11-10 08:43:27,334: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=210> (referer: None)
+DEBUG 2017-11-10 08:43:27,419: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=208> (referer: None)
+DEBUG 2017-11-10 08:43:27,435: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=210
+DEBUG 2017-11-10 08:43:27,502: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=209> (referer: None)
+DEBUG 2017-11-10 08:43:27,520: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=208
+DEBUG 2017-11-10 08:43:27,602: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=209
+DEBUG 2017-11-10 08:43:27,705: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=212> (referer: None)
+DEBUG 2017-11-10 08:43:27,716: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=214> (referer: None)
+DEBUG 2017-11-10 08:43:27,722: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=213> (referer: None)
+DEBUG 2017-11-10 08:43:27,733: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=211> (referer: None)
+DEBUG 2017-11-10 08:43:27,801: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=215> (referer: None)
+DEBUG 2017-11-10 08:43:27,807: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=212
+DEBUG 2017-11-10 08:43:27,878: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=214
+DEBUG 2017-11-10 08:43:27,937: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=213
+DEBUG 2017-11-10 08:43:28,012: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=211
+DEBUG 2017-11-10 08:43:28,075: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=216> (referer: None)
+DEBUG 2017-11-10 08:43:28,076: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=215
+DEBUG 2017-11-10 08:43:28,129: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=217> (referer: None)
+DEBUG 2017-11-10 08:43:28,132: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=218> (referer: None)
+DEBUG 2017-11-10 08:43:28,176: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=216
+DEBUG 2017-11-10 08:43:28,259: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=217
+DEBUG 2017-11-10 08:43:28,329: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=218
+DEBUG 2017-11-10 08:43:28,378: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=219> (referer: None)
+DEBUG 2017-11-10 08:43:28,381: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=220> (referer: None)
+DEBUG 2017-11-10 08:43:28,385: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=221> (referer: None)
+DEBUG 2017-11-10 08:43:28,389: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=223> (referer: None)
+DEBUG 2017-11-10 08:43:28,393: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=222> (referer: None)
+DEBUG 2017-11-10 08:43:28,481: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=219
+DEBUG 2017-11-10 08:43:28,543: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=220
+DEBUG 2017-11-10 08:43:28,608: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=221
+DEBUG 2017-11-10 08:43:28,694: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=223
+DEBUG 2017-11-10 08:43:28,776: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=222
+DEBUG 2017-11-10 08:43:28,895: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=225> (referer: None)
+DEBUG 2017-11-10 08:43:28,902: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=226> (referer: None)
+DEBUG 2017-11-10 08:43:28,908: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=224> (referer: None)
+DEBUG 2017-11-10 08:43:28,995: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=228> (referer: None)
+DEBUG 2017-11-10 08:43:28,995: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=225
+DEBUG 2017-11-10 08:43:29,059: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=227> (referer: None)
+DEBUG 2017-11-10 08:43:29,062: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=231> (referer: None)
+DEBUG 2017-11-10 08:43:29,063: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=226
+DEBUG 2017-11-10 08:43:29,140: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=224
+DEBUG 2017-11-10 08:43:29,228: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=230> (referer: None)
+DEBUG 2017-11-10 08:43:29,228: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=228
+DEBUG 2017-11-10 08:43:29,283: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=227
+DEBUG 2017-11-10 08:43:29,328: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=231
+DEBUG 2017-11-10 08:43:29,391: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=229> (referer: None)
+DEBUG 2017-11-10 08:43:29,396: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=230
+DEBUG 2017-11-10 08:43:29,476: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=232> (referer: None)
+DEBUG 2017-11-10 08:43:29,486: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=233> (referer: None)
+DEBUG 2017-11-10 08:43:29,492: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=229
+DEBUG 2017-11-10 08:43:29,587: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=234> (referer: None)
+DEBUG 2017-11-10 08:43:29,587: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=232
+DEBUG 2017-11-10 08:43:29,687: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=233
+DEBUG 2017-11-10 08:43:29,743: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=234
+DEBUG 2017-11-10 08:43:30,011: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=238> (referer: None)
+DEBUG 2017-11-10 08:43:30,115: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=238
+DEBUG 2017-11-10 08:43:30,207: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=235> (referer: None)
+DEBUG 2017-11-10 08:43:30,307: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=235
+DEBUG 2017-11-10 08:43:30,360: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=239> (referer: None)
+DEBUG 2017-11-10 08:43:30,363: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=241> (referer: None)
+DEBUG 2017-11-10 08:43:30,366: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=237> (referer: None)
+DEBUG 2017-11-10 08:43:30,370: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=240> (referer: None)
+DEBUG 2017-11-10 08:43:30,382: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=242> (referer: None)
+DEBUG 2017-11-10 08:43:30,407: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=236> (referer: None)
+DEBUG 2017-11-10 08:43:30,461: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=239
+DEBUG 2017-11-10 08:43:30,505: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=241
+DEBUG 2017-11-10 08:43:30,566: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=237
+DEBUG 2017-11-10 08:43:30,633: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=240
+DEBUG 2017-11-10 08:43:30,696: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=242
+DEBUG 2017-11-10 08:43:30,802: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=243> (referer: None)
+DEBUG 2017-11-10 08:43:30,803: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=236
+DEBUG 2017-11-10 08:43:31,058: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=250> (referer: None)
+DEBUG 2017-11-10 08:43:31,066: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=244> (referer: None)
+DEBUG 2017-11-10 08:43:31,080: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=246> (referer: None)
+DEBUG 2017-11-10 08:43:31,085: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=249> (referer: None)
+DEBUG 2017-11-10 08:43:31,086: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=243
+DEBUG 2017-11-10 08:43:31,222: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=248> (referer: None)
+DEBUG 2017-11-10 08:43:31,223: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=250
+DEBUG 2017-11-10 08:43:31,309: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=244
+DEBUG 2017-11-10 08:43:31,388: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=246
+DEBUG 2017-11-10 08:43:31,458: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=249
+DEBUG 2017-11-10 08:43:31,519: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=245> (referer: None)
+DEBUG 2017-11-10 08:43:31,524: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=247> (referer: None)
+DEBUG 2017-11-10 08:43:31,526: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=248
+DEBUG 2017-11-10 08:43:31,615: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=251> (referer: None)
+DEBUG 2017-11-10 08:43:31,620: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=245
+DEBUG 2017-11-10 08:43:31,665: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=247
+DEBUG 2017-11-10 08:43:31,718: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=251
+DEBUG 2017-11-10 08:43:31,790: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=252> (referer: None)
+DEBUG 2017-11-10 08:43:31,836: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=255> (referer: None)
+DEBUG 2017-11-10 08:43:31,893: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=252
+DEBUG 2017-11-10 08:43:31,941: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=253> (referer: None)
+DEBUG 2017-11-10 08:43:31,942: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=255
+DEBUG 2017-11-10 08:43:31,998: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=254> (referer: None)
+DEBUG 2017-11-10 08:43:32,046: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=253
+DEBUG 2017-11-10 08:43:32,105: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=254
+DEBUG 2017-11-10 08:43:32,160: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=257> (referer: None)
+DEBUG 2017-11-10 08:43:32,164: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=259> (referer: None)
+DEBUG 2017-11-10 08:43:32,264: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=257
+DEBUG 2017-11-10 08:43:32,334: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=259
+DEBUG 2017-11-10 08:43:32,383: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=260> (referer: None)
+DEBUG 2017-11-10 08:43:32,385: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=258> (referer: None)
+DEBUG 2017-11-10 08:43:32,396: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=256> (referer: None)
+DEBUG 2017-11-10 08:43:32,410: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=261> (referer: None)
+DEBUG 2017-11-10 08:43:32,483: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=260
+DEBUG 2017-11-10 08:43:32,557: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=258
+DEBUG 2017-11-10 08:43:32,627: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=256
+DEBUG 2017-11-10 08:43:32,684: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=261
+DEBUG 2017-11-10 08:43:32,757: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=262> (referer: None)
+DEBUG 2017-11-10 08:43:32,760: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=264> (referer: None)
+DEBUG 2017-11-10 08:43:32,768: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=263> (referer: None)
+DEBUG 2017-11-10 08:43:32,862: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=262
+DEBUG 2017-11-10 08:43:32,920: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=264
+DEBUG 2017-11-10 08:43:33,058: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=266> (referer: None)
+DEBUG 2017-11-10 08:43:33,067: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=265> (referer: None)
+DEBUG 2017-11-10 08:43:33,073: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=267> (referer: None)
+DEBUG 2017-11-10 08:43:33,076: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=269> (referer: None)
+DEBUG 2017-11-10 08:43:33,077: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=263
+DEBUG 2017-11-10 08:43:33,191: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=268> (referer: None)
+DEBUG 2017-11-10 08:43:33,192: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=266
+DEBUG 2017-11-10 08:43:33,276: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=265
+DEBUG 2017-11-10 08:43:33,425: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=267
+DEBUG 2017-11-10 08:43:33,489: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=269
+DEBUG 2017-11-10 08:43:33,549: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=270> (referer: None)
+DEBUG 2017-11-10 08:43:33,554: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=271> (referer: None)
+DEBUG 2017-11-10 08:43:33,560: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=268
+DEBUG 2017-11-10 08:43:33,651: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=270
+DEBUG 2017-11-10 08:43:33,878: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=273> (referer: None)
+DEBUG 2017-11-10 08:43:33,886: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=276> (referer: None)
+DEBUG 2017-11-10 08:43:33,887: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=271
+DEBUG 2017-11-10 08:43:34,037: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=274> (referer: None)
+DEBUG 2017-11-10 08:43:34,041: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=275> (referer: None)
+DEBUG 2017-11-10 08:43:34,042: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=273
+DEBUG 2017-11-10 08:43:34,401: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=276
+DEBUG 2017-11-10 08:43:34,499: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=278> (referer: None)
+DEBUG 2017-11-10 08:43:34,502: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=279> (referer: None)
+DEBUG 2017-11-10 08:43:34,507: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=277> (referer: None)
+DEBUG 2017-11-10 08:43:34,511: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=272> (referer: None)
+DEBUG 2017-11-10 08:43:34,512: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=274
+DEBUG 2017-11-10 08:43:34,572: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=275
+DEBUG 2017-11-10 08:43:34,746: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=280> (referer: None)
+DEBUG 2017-11-10 08:43:34,752: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=281> (referer: None)
+DEBUG 2017-11-10 08:43:34,756: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=278
+DEBUG 2017-11-10 08:43:34,857: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=279
+DEBUG 2017-11-10 08:43:34,947: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=277
+DEBUG 2017-11-10 08:43:35,034: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=272
+DEBUG 2017-11-10 08:43:35,316: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=282> (referer: None)
+DEBUG 2017-11-10 08:43:35,320: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=283> (referer: None)
+DEBUG 2017-11-10 08:43:35,320: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=280
+DEBUG 2017-11-10 08:43:35,375: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=281
+DEBUG 2017-11-10 08:43:35,449: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=284> (referer: None)
+DEBUG 2017-11-10 08:43:35,453: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=285> (referer: None)
+DEBUG 2017-11-10 08:43:35,456: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=286> (referer: None)
+DEBUG 2017-11-10 08:43:35,458: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=282
+DEBUG 2017-11-10 08:43:35,567: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=283
+DEBUG 2017-11-10 08:43:35,655: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=287> (referer: None)
+DEBUG 2017-11-10 08:43:35,656: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=284
+DEBUG 2017-11-10 08:43:35,722: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=285
+DEBUG 2017-11-10 08:43:35,782: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=286
+DEBUG 2017-11-10 08:43:35,857: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=287
+DEBUG 2017-11-10 08:43:35,974: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=291> (referer: None)
+DEBUG 2017-11-10 08:43:36,078: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=291
+DEBUG 2017-11-10 08:43:36,135: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=290> (referer: None)
+DEBUG 2017-11-10 08:43:36,236: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=290
+DEBUG 2017-11-10 08:43:36,288: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=292> (referer: None)
+DEBUG 2017-11-10 08:43:36,389: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=292
+DEBUG 2017-11-10 08:43:36,523: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=289> (referer: None)
+DEBUG 2017-11-10 08:43:36,533: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=293> (referer: None)
+DEBUG 2017-11-10 08:43:36,624: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=289
+DEBUG 2017-11-10 08:43:36,681: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=293
+DEBUG 2017-11-10 08:43:36,763: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=295> (referer: None)
+DEBUG 2017-11-10 08:43:36,810: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=294> (referer: None)
+DEBUG 2017-11-10 08:43:36,869: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=295
+DEBUG 2017-11-10 08:43:36,939: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=298> (referer: None)
+DEBUG 2017-11-10 08:43:36,939: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=294
+DEBUG 2017-11-10 08:43:37,104: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=288> (referer: None)
+DEBUG 2017-11-10 08:43:37,105: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=298
+DEBUG 2017-11-10 08:43:37,205: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=288
+DEBUG 2017-11-10 08:43:37,443: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=300> (referer: None)
+DEBUG 2017-11-10 08:43:37,447: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=301> (referer: None)
+DEBUG 2017-11-10 08:43:37,513: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=302> (referer: None)
+DEBUG 2017-11-10 08:43:37,543: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=300
+DEBUG 2017-11-10 08:43:37,657: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=301
+DEBUG 2017-11-10 08:43:37,829: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=302
+DEBUG 2017-11-10 08:43:37,903: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=303> (referer: None)
+DEBUG 2017-11-10 08:43:38,016: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=305> (referer: None)
+DEBUG 2017-11-10 08:43:38,017: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=303
+DEBUG 2017-11-10 08:43:38,109: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=306> (referer: None)
+DEBUG 2017-11-10 08:43:38,117: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=305
+DEBUG 2017-11-10 08:43:38,211: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=306
+DEBUG 2017-11-10 08:43:38,299: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=296> (referer: None)
+DEBUG 2017-11-10 08:43:38,322: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=307> (referer: None)
+DEBUG 2017-11-10 08:43:38,403: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=296
+DEBUG 2017-11-10 08:43:38,591: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=308> (referer: None)
+DEBUG 2017-11-10 08:43:38,591: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=307
+DEBUG 2017-11-10 08:43:38,691: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=308
+DEBUG 2017-11-10 08:43:38,761: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=310> (referer: None)
+DEBUG 2017-11-10 08:43:38,799: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=309> (referer: None)
+DEBUG 2017-11-10 08:43:38,838: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=311> (referer: None)
+DEBUG 2017-11-10 08:43:38,864: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=310
+DEBUG 2017-11-10 08:43:38,936: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=312> (referer: None)
+DEBUG 2017-11-10 08:43:38,936: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=309
+DEBUG 2017-11-10 08:43:38,997: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=311
+DEBUG 2017-11-10 08:43:39,099: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=297> (referer: None)
+DEBUG 2017-11-10 08:43:39,099: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=312
+DEBUG 2017-11-10 08:43:39,176: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=299> (referer: None)
+DEBUG 2017-11-10 08:43:39,202: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=297
+DEBUG 2017-11-10 08:43:39,261: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=313> (referer: None)
+DEBUG 2017-11-10 08:43:39,277: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=299
+DEBUG 2017-11-10 08:43:39,365: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=315> (referer: None)
+DEBUG 2017-11-10 08:43:39,366: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=313
+DEBUG 2017-11-10 08:43:39,454: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=314> (referer: None)
+DEBUG 2017-11-10 08:43:39,459: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=316> (referer: None)
+DEBUG 2017-11-10 08:43:39,466: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=315
+DEBUG 2017-11-10 08:43:39,554: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=314
+DEBUG 2017-11-10 08:43:39,666: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=317> (referer: None)
+DEBUG 2017-11-10 08:43:39,666: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=316
+DEBUG 2017-11-10 08:43:39,748: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=318> (referer: None)
+DEBUG 2017-11-10 08:43:39,767: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=317
+DEBUG 2017-11-10 08:43:39,832: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=320> (referer: None)
+DEBUG 2017-11-10 08:43:39,850: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=318
+DEBUG 2017-11-10 08:43:39,925: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=319> (referer: None)
+DEBUG 2017-11-10 08:43:39,933: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=320
+DEBUG 2017-11-10 08:43:40,004: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=321> (referer: None)
+DEBUG 2017-11-10 08:43:40,011: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=322> (referer: None)
+DEBUG 2017-11-10 08:43:40,026: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=319
+DEBUG 2017-11-10 08:43:40,088: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=323> (referer: None)
+DEBUG 2017-11-10 08:43:40,107: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=321
+DEBUG 2017-11-10 08:43:40,170: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=322
+DEBUG 2017-11-10 08:43:40,267: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=323
+DEBUG 2017-11-10 08:43:40,325: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=324> (referer: None)
+DEBUG 2017-11-10 08:43:40,330: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=325> (referer: None)
+DEBUG 2017-11-10 08:43:40,426: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=324
+DEBUG 2017-11-10 08:43:40,590: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=326> (referer: None)
+DEBUG 2017-11-10 08:43:40,597: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=327> (referer: None)
+DEBUG 2017-11-10 08:43:40,598: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=325
+DEBUG 2017-11-10 08:43:40,867: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=328> (referer: None)
+DEBUG 2017-11-10 08:43:40,872: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=330> (referer: None)
+DEBUG 2017-11-10 08:43:40,872: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=326
+DEBUG 2017-11-10 08:43:40,949: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=327
+DEBUG 2017-11-10 08:43:41,191: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=331> (referer: None)
+DEBUG 2017-11-10 08:43:41,195: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=332> (referer: None)
+DEBUG 2017-11-10 08:43:41,202: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=328
+DEBUG 2017-11-10 08:43:41,305: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=330
+DEBUG 2017-11-10 08:43:41,381: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=331
+DEBUG 2017-11-10 08:43:41,607: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=332
+DEBUG 2017-11-10 08:43:41,743: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=304> (referer: None)
+DEBUG 2017-11-10 08:43:41,748: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=333> (referer: None)
+DEBUG 2017-11-10 08:43:41,751: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=336> (referer: None)
+DEBUG 2017-11-10 08:43:41,757: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=334> (referer: None)
+DEBUG 2017-11-10 08:43:41,775: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=335> (referer: None)
+DEBUG 2017-11-10 08:43:41,846: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=304
+DEBUG 2017-11-10 08:43:41,952: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=338> (referer: None)
+DEBUG 2017-11-10 08:43:41,952: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=333
+DEBUG 2017-11-10 08:43:42,006: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=336
+DEBUG 2017-11-10 08:43:42,074: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=334
+DEBUG 2017-11-10 08:43:42,153: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=335
+DEBUG 2017-11-10 08:43:42,259: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=337> (referer: None)
+DEBUG 2017-11-10 08:43:42,262: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=329> (referer: None)
+DEBUG 2017-11-10 08:43:42,264: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=338
+DEBUG 2017-11-10 08:43:42,360: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=340> (referer: None)
+DEBUG 2017-11-10 08:43:42,372: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=342> (referer: None)
+DEBUG 2017-11-10 08:43:42,374: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=337
+DEBUG 2017-11-10 08:43:42,441: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=329
+DEBUG 2017-11-10 08:43:42,495: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=340
+DEBUG 2017-11-10 08:43:42,544: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=342
+DEBUG 2017-11-10 08:43:42,837: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=344> (referer: None)
+DEBUG 2017-11-10 08:43:42,859: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=339> (referer: None)
+DEBUG 2017-11-10 08:43:42,901: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=346> (referer: None)
+DEBUG 2017-11-10 08:43:42,939: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=344
+DEBUG 2017-11-10 08:43:42,985: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=339
+DEBUG 2017-11-10 08:43:43,037: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=345> (referer: None)
+DEBUG 2017-11-10 08:43:43,041: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=341> (referer: None)
+DEBUG 2017-11-10 08:43:43,041: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=346
+DEBUG 2017-11-10 08:43:43,118: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=347> (referer: None)
+DEBUG 2017-11-10 08:43:43,139: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=345
+DEBUG 2017-11-10 08:43:43,202: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=348> (referer: None)
+DEBUG 2017-11-10 08:43:43,202: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=341
+DEBUG 2017-11-10 08:43:43,287: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=343> (referer: None)
+DEBUG 2017-11-10 08:43:43,287: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=347
+DEBUG 2017-11-10 08:43:43,346: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=348
+DEBUG 2017-11-10 08:43:43,426: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=343
+DEBUG 2017-11-10 08:43:43,484: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=350> (referer: None)
+DEBUG 2017-11-10 08:43:43,487: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=351> (referer: None)
+DEBUG 2017-11-10 08:43:43,586: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=350
+DEBUG 2017-11-10 08:43:43,672: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=349> (referer: None)
+DEBUG 2017-11-10 08:43:43,673: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=351
+DEBUG 2017-11-10 08:43:43,781: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=352> (referer: None)
+DEBUG 2017-11-10 08:43:43,783: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=349
+DEBUG 2017-11-10 08:43:43,842: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=354> (referer: None)
+DEBUG 2017-11-10 08:43:43,847: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=353> (referer: None)
+DEBUG 2017-11-10 08:43:43,883: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=356> (referer: None)
+DEBUG 2017-11-10 08:43:43,884: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=352
+DEBUG 2017-11-10 08:43:43,949: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=354
+DEBUG 2017-11-10 08:43:44,009: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=353
+DEBUG 2017-11-10 08:43:44,065: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=355> (referer: None)
+DEBUG 2017-11-10 08:43:44,065: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=356
+DEBUG 2017-11-10 08:43:44,144: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=357> (referer: None)
+DEBUG 2017-11-10 08:43:44,149: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=358> (referer: None)
+DEBUG 2017-11-10 08:43:44,166: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=355
+DEBUG 2017-11-10 08:43:44,245: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=357
+DEBUG 2017-11-10 08:43:44,305: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=358
+DEBUG 2017-11-10 08:43:44,355: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=359> (referer: None)
+DEBUG 2017-11-10 08:43:44,414: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=360> (referer: None)
+DEBUG 2017-11-10 08:43:44,435: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=361> (referer: None)
+DEBUG 2017-11-10 08:43:44,458: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=359
+DEBUG 2017-11-10 08:43:44,511: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=362> (referer: None)
+DEBUG 2017-11-10 08:43:44,514: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=360
+DEBUG 2017-11-10 08:43:44,569: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=363> (referer: None)
+DEBUG 2017-11-10 08:43:44,570: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=361
+DEBUG 2017-11-10 08:43:44,628: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=362
+DEBUG 2017-11-10 08:43:44,683: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=363
+DEBUG 2017-11-10 08:43:44,735: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=366> (referer: None)
+DEBUG 2017-11-10 08:43:44,775: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=365> (referer: None)
+DEBUG 2017-11-10 08:43:44,840: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=366
+DEBUG 2017-11-10 08:43:44,893: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=365
+DEBUG 2017-11-10 08:43:44,962: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=367> (referer: None)
+DEBUG 2017-11-10 08:43:45,013: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=368> (referer: None)
+DEBUG 2017-11-10 08:43:45,019: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=369> (referer: None)
+DEBUG 2017-11-10 08:43:45,052: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=364> (referer: None)
+DEBUG 2017-11-10 08:43:45,062: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=367
+DEBUG 2017-11-10 08:43:45,114: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=370> (referer: None)
+DEBUG 2017-11-10 08:43:45,115: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=368
+DEBUG 2017-11-10 08:43:45,162: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=369
+DEBUG 2017-11-10 08:43:45,208: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=364
+DEBUG 2017-11-10 08:43:45,278: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=370
+DEBUG 2017-11-10 08:43:45,359: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=372> (referer: None)
+DEBUG 2017-11-10 08:43:45,377: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=373> (referer: None)
+DEBUG 2017-11-10 08:43:45,461: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=372
+DEBUG 2017-11-10 08:43:45,525: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=373
+DEBUG 2017-11-10 08:43:45,582: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=374> (referer: None)
+DEBUG 2017-11-10 08:43:45,587: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=375> (referer: None)
+DEBUG 2017-11-10 08:43:45,630: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=371> (referer: None)
+DEBUG 2017-11-10 08:43:45,684: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=374
+DEBUG 2017-11-10 08:43:45,754: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=376> (referer: None)
+DEBUG 2017-11-10 08:43:45,759: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=378> (referer: None)
+DEBUG 2017-11-10 08:43:45,761: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=377> (referer: None)
+DEBUG 2017-11-10 08:43:45,761: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=375
+DEBUG 2017-11-10 08:43:45,977: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=371
+DEBUG 2017-11-10 08:43:46,035: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=379> (referer: None)
+DEBUG 2017-11-10 08:43:46,037: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=376
+DEBUG 2017-11-10 08:43:46,083: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=378
+DEBUG 2017-11-10 08:43:46,135: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=377
+DEBUG 2017-11-10 08:43:46,194: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=383> (referer: None)
+DEBUG 2017-11-10 08:43:46,198: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=382> (referer: None)
+DEBUG 2017-11-10 08:43:46,202: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=379
+DEBUG 2017-11-10 08:43:46,260: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=380> (referer: None)
+DEBUG 2017-11-10 08:43:46,297: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=383
+DEBUG 2017-11-10 08:43:46,344: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=382
+DEBUG 2017-11-10 08:43:46,398: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=381> (referer: None)
+DEBUG 2017-11-10 08:43:46,398: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=380
+DEBUG 2017-11-10 08:43:46,503: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=381
+DEBUG 2017-11-10 08:43:46,594: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=385> (referer: None)
+DEBUG 2017-11-10 08:43:46,634: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=384> (referer: None)
+DEBUG 2017-11-10 08:43:46,695: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=385
+DEBUG 2017-11-10 08:43:46,776: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=386> (referer: None)
+DEBUG 2017-11-10 08:43:46,777: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=384
+DEBUG 2017-11-10 08:43:46,882: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=388> (referer: None)
+DEBUG 2017-11-10 08:43:46,886: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=389> (referer: None)
+DEBUG 2017-11-10 08:43:46,890: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=387> (referer: None)
+DEBUG 2017-11-10 08:43:46,894: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=386
+DEBUG 2017-11-10 08:43:46,983: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=388
+DEBUG 2017-11-10 08:43:47,029: get_id other urlhttp://store.steampowered.com/digitalgiftcards/?snr=1_7_7_230_150_388
+DEBUG 2017-11-10 08:43:47,030: get_id error urlhttp://store.steampowered.com/digitalgiftcards/?snr=1_7_7_230_150_388
+DEBUG 2017-11-10 08:43:47,038: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=390> (referer: None)
+DEBUG 2017-11-10 08:43:47,039: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=389
+DEBUG 2017-11-10 08:43:47,114: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=387
+DEBUG 2017-11-10 08:43:47,211: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=390
+DEBUG 2017-11-10 08:43:47,278: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=393> (referer: None)
+DEBUG 2017-11-10 08:43:47,281: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=392> (referer: None)
+DEBUG 2017-11-10 08:43:47,320: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=391> (referer: None)
+DEBUG 2017-11-10 08:43:47,382: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=393
+DEBUG 2017-11-10 08:43:47,432: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=392
+DEBUG 2017-11-10 08:43:47,478: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=391
+DEBUG 2017-11-10 08:43:47,531: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=394> (referer: None)
+DEBUG 2017-11-10 08:43:47,568: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=395> (referer: None)
+DEBUG 2017-11-10 08:43:47,584: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=396> (referer: None)
+DEBUG 2017-11-10 08:43:47,637: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=394
+DEBUG 2017-11-10 08:43:47,683: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=395
+DEBUG 2017-11-10 08:43:47,731: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=396
+DEBUG 2017-11-10 08:43:47,833: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=397> (referer: None)
+DEBUG 2017-11-10 08:43:47,836: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=398> (referer: None)
+DEBUG 2017-11-10 08:43:47,839: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=399> (referer: None)
+DEBUG 2017-11-10 08:43:47,843: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=400> (referer: None)
+DEBUG 2017-11-10 08:43:47,934: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=397
+DEBUG 2017-11-10 08:43:47,981: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=398
+DEBUG 2017-11-10 08:43:48,028: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=399
+DEBUG 2017-11-10 08:43:48,089: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=400
+DEBUG 2017-11-10 08:43:48,165: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=403> (referer: None)
+DEBUG 2017-11-10 08:43:48,191: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=401> (referer: None)
+DEBUG 2017-11-10 08:43:48,269: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=403
+DEBUG 2017-11-10 08:43:48,334: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=402> (referer: None)
+DEBUG 2017-11-10 08:43:48,335: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=401
+DEBUG 2017-11-10 08:43:48,393: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=404> (referer: None)
+DEBUG 2017-11-10 08:43:48,437: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=402
+DEBUG 2017-11-10 08:43:48,486: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=408> (referer: None)
+DEBUG 2017-11-10 08:43:48,494: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=404
+DEBUG 2017-11-10 08:43:48,570: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=406> (referer: None)
+DEBUG 2017-11-10 08:43:48,578: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=405> (referer: None)
+DEBUG 2017-11-10 08:43:48,588: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=408
+DEBUG 2017-11-10 08:43:48,648: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=407> (referer: None)
+DEBUG 2017-11-10 08:43:48,672: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=406
+DEBUG 2017-11-10 08:43:48,723: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=409> (referer: None)
+DEBUG 2017-11-10 08:43:48,724: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=405
+DEBUG 2017-11-10 08:43:48,779: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=410> (referer: None)
+DEBUG 2017-11-10 08:43:48,780: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=407
+DEBUG 2017-11-10 08:43:48,847: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=409
+DEBUG 2017-11-10 08:43:48,903: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=410
+DEBUG 2017-11-10 08:43:48,956: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=412> (referer: None)
+DEBUG 2017-11-10 08:43:48,985: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=411> (referer: None)
+DEBUG 2017-11-10 08:43:48,996: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=413> (referer: None)
+DEBUG 2017-11-10 08:43:49,059: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=412
+DEBUG 2017-11-10 08:43:49,114: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=411
+DEBUG 2017-11-10 08:43:49,160: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=413
+DEBUG 2017-11-10 08:43:49,267: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=414> (referer: None)
+DEBUG 2017-11-10 08:43:49,334: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=417> (referer: None)
+DEBUG 2017-11-10 08:43:49,345: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=416> (referer: None)
+DEBUG 2017-11-10 08:43:49,368: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=414
+DEBUG 2017-11-10 08:43:49,439: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=417
+DEBUG 2017-11-10 08:43:49,495: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=416
+DEBUG 2017-11-10 08:43:49,571: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=419> (referer: None)
+DEBUG 2017-11-10 08:43:49,593: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=420> (referer: None)
+DEBUG 2017-11-10 08:43:49,601: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=415> (referer: None)
+DEBUG 2017-11-10 08:43:49,654: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=421> (referer: None)
+DEBUG 2017-11-10 08:43:49,672: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=419
+DEBUG 2017-11-10 08:43:49,729: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=420
+DEBUG 2017-11-10 08:43:49,798: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=415
+DEBUG 2017-11-10 08:43:49,858: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=421
+DEBUG 2017-11-10 08:43:49,920: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=422> (referer: None)
+DEBUG 2017-11-10 08:43:49,937: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=424> (referer: None)
+DEBUG 2017-11-10 08:43:50,022: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=422
+DEBUG 2017-11-10 08:43:50,521: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=423> (referer: None)
+DEBUG 2017-11-10 08:43:50,524: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=425> (referer: None)
+DEBUG 2017-11-10 08:43:50,530: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=427> (referer: None)
+DEBUG 2017-11-10 08:43:50,534: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=428> (referer: None)
+DEBUG 2017-11-10 08:43:50,538: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=426> (referer: None)
+DEBUG 2017-11-10 08:43:50,539: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=424
+DEBUG 2017-11-10 08:43:50,691: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=430> (referer: None)
+DEBUG 2017-11-10 08:43:50,699: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=418> (referer: None)
+DEBUG 2017-11-10 08:43:50,753: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=423
+DEBUG 2017-11-10 08:43:50,927: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=425
+DEBUG 2017-11-10 08:43:51,070: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=427
+DEBUG 2017-11-10 08:43:51,323: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=428
+DEBUG 2017-11-10 08:43:51,394: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=426
+DEBUG 2017-11-10 08:43:51,461: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=429> (referer: None)
+DEBUG 2017-11-10 08:43:51,464: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=431> (referer: None)
+DEBUG 2017-11-10 08:43:51,466: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=432> (referer: None)
+DEBUG 2017-11-10 08:43:51,468: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=433> (referer: None)
+DEBUG 2017-11-10 08:43:51,470: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=434> (referer: None)
+DEBUG 2017-11-10 08:43:51,473: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=435> (referer: None)
+DEBUG 2017-11-10 08:43:51,473: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=430
+DEBUG 2017-11-10 08:43:51,521: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=418
+DEBUG 2017-11-10 08:43:51,631: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=429
+DEBUG 2017-11-10 08:43:51,691: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=431
+DEBUG 2017-11-10 08:43:51,744: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=432
+DEBUG 2017-11-10 08:43:51,805: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=433
+DEBUG 2017-11-10 08:43:52,011: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=434
+DEBUG 2017-11-10 08:43:52,095: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=435
+DEBUG 2017-11-10 08:43:52,174: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=436> (referer: None)
+DEBUG 2017-11-10 08:43:52,190: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=438> (referer: None)
+DEBUG 2017-11-10 08:43:52,193: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=439> (referer: None)
+DEBUG 2017-11-10 08:43:52,208: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=440> (referer: None)
+DEBUG 2017-11-10 08:43:52,276: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=436
+DEBUG 2017-11-10 08:43:52,350: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=438
+DEBUG 2017-11-10 08:43:52,404: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=439
+DEBUG 2017-11-10 08:43:52,455: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=440
+DEBUG 2017-11-10 08:43:52,675: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=437> (referer: None)
+DEBUG 2017-11-10 08:43:52,751: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=442> (referer: None)
+DEBUG 2017-11-10 08:43:52,766: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=444> (referer: None)
+DEBUG 2017-11-10 08:43:52,776: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=437
+DEBUG 2017-11-10 08:43:52,848: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=445> (referer: None)
+DEBUG 2017-11-10 08:43:52,851: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=447> (referer: None)
+DEBUG 2017-11-10 08:43:52,853: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=442
+DEBUG 2017-11-10 08:43:52,918: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=446> (referer: None)
+DEBUG 2017-11-10 08:43:52,918: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=444
+DEBUG 2017-11-10 08:43:52,988: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=445
+DEBUG 2017-11-10 08:43:53,045: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=447
+DEBUG 2017-11-10 08:43:53,106: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=441> (referer: None)
+DEBUG 2017-11-10 08:43:53,108: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=443> (referer: None)
+DEBUG 2017-11-10 08:43:53,109: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=446
+DEBUG 2017-11-10 08:43:53,206: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=441
+DEBUG 2017-11-10 08:43:53,327: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=449> (referer: None)
+DEBUG 2017-11-10 08:43:53,328: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=443
+DEBUG 2017-11-10 08:43:53,415: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=452> (referer: None)
+DEBUG 2017-11-10 08:43:53,422: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=450> (referer: None)
+DEBUG 2017-11-10 08:43:53,429: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=449
+DEBUG 2017-11-10 08:43:53,504: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=451> (referer: None)
+DEBUG 2017-11-10 08:43:53,507: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=448> (referer: None)
+DEBUG 2017-11-10 08:43:53,515: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=452
+DEBUG 2017-11-10 08:43:53,593: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=453> (referer: None)
+DEBUG 2017-11-10 08:43:53,593: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=450
+DEBUG 2017-11-10 08:43:53,658: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=451
+DEBUG 2017-11-10 08:43:53,729: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=448
+DEBUG 2017-11-10 08:43:53,791: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=454> (referer: None)
+DEBUG 2017-11-10 08:43:53,792: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=453
+DEBUG 2017-11-10 08:43:53,851: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=455> (referer: None)
+DEBUG 2017-11-10 08:43:53,894: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=454
+DEBUG 2017-11-10 08:43:53,961: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=455
+DEBUG 2017-11-10 08:43:54,022: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=458> (referer: None)
+DEBUG 2017-11-10 08:43:54,045: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=457> (referer: None)
+DEBUG 2017-11-10 08:43:54,123: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=458
+DEBUG 2017-11-10 08:43:54,193: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=457
+DEBUG 2017-11-10 08:43:54,384: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=461> (referer: None)
+DEBUG 2017-11-10 08:43:54,388: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=459> (referer: None)
+DEBUG 2017-11-10 08:43:54,446: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=462> (referer: None)
+DEBUG 2017-11-10 08:43:54,477: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=463> (referer: None)
+DEBUG 2017-11-10 08:43:54,486: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=461
+DEBUG 2017-11-10 08:43:54,755: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=459
+DEBUG 2017-11-10 08:43:54,816: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=462
+DEBUG 2017-11-10 08:43:54,876: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=463
+DEBUG 2017-11-10 08:43:54,939: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=464> (referer: None)
+DEBUG 2017-11-10 08:43:54,943: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=465> (referer: None)
+DEBUG 2017-11-10 08:43:54,995: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=466> (referer: None)
+DEBUG 2017-11-10 08:43:55,035: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=456> (referer: None)
+DEBUG 2017-11-10 08:43:55,039: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=467> (referer: None)
+DEBUG 2017-11-10 08:43:55,040: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=464
+DEBUG 2017-11-10 08:43:55,112: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=468> (referer: None)
+DEBUG 2017-11-10 08:43:55,113: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=465
+DEBUG 2017-11-10 08:43:55,173: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=466
+DEBUG 2017-11-10 08:43:55,245: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=456
+DEBUG 2017-11-10 08:43:55,345: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=467
+DEBUG 2017-11-10 08:43:55,430: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=468
+DEBUG 2017-11-10 08:43:55,530: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=460> (referer: None)
+DEBUG 2017-11-10 08:43:55,535: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=469> (referer: None)
+DEBUG 2017-11-10 08:43:55,549: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=470> (referer: None)
+DEBUG 2017-11-10 08:43:55,553: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=471> (referer: None)
+DEBUG 2017-11-10 08:43:55,569: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=472> (referer: None)
+DEBUG 2017-11-10 08:43:55,620: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=474> (referer: None)
+DEBUG 2017-11-10 08:43:55,633: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=460
+DEBUG 2017-11-10 08:43:55,739: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=473> (referer: None)
+DEBUG 2017-11-10 08:43:55,741: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=469
+DEBUG 2017-11-10 08:43:55,905: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=470
+DEBUG 2017-11-10 08:43:55,992: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=471
+DEBUG 2017-11-10 08:43:56,072: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=472
+DEBUG 2017-11-10 08:43:56,142: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=474
+DEBUG 2017-11-10 08:43:56,208: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=480> (referer: None)
+DEBUG 2017-11-10 08:43:56,213: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=479> (referer: None)
+DEBUG 2017-11-10 08:43:56,217: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=475> (referer: None)
+DEBUG 2017-11-10 08:43:56,222: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=476> (referer: None)
+DEBUG 2017-11-10 08:43:56,223: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=473
+DEBUG 2017-11-10 08:43:56,296: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=481> (referer: None)
+DEBUG 2017-11-10 08:43:56,299: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=478> (referer: None)
+DEBUG 2017-11-10 08:43:56,303: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=477> (referer: None)
+DEBUG 2017-11-10 08:43:56,311: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=480
+DEBUG 2017-11-10 08:43:56,371: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=479
+DEBUG 2017-11-10 08:43:56,454: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=475
+DEBUG 2017-11-10 08:43:56,605: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=476
+DEBUG 2017-11-10 08:43:56,771: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=481
+DEBUG 2017-11-10 08:43:56,926: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=478
+DEBUG 2017-11-10 08:43:57,042: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=477
+DEBUG 2017-11-10 08:43:57,117: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=487> (referer: None)
+DEBUG 2017-11-10 08:43:57,121: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=488> (referer: None)
+DEBUG 2017-11-10 08:43:57,124: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=483> (referer: None)
+DEBUG 2017-11-10 08:43:57,128: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=484> (referer: None)
+DEBUG 2017-11-10 08:43:57,132: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=485> (referer: None)
+DEBUG 2017-11-10 08:43:57,143: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=486> (referer: None)
+DEBUG 2017-11-10 08:43:57,155: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=482> (referer: None)
+DEBUG 2017-11-10 08:43:57,223: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=487
+DEBUG 2017-11-10 08:43:57,289: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=488
+DEBUG 2017-11-10 08:43:57,374: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=489> (referer: None)
+DEBUG 2017-11-10 08:43:57,374: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=483
+DEBUG 2017-11-10 08:43:57,430: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=484
+DEBUG 2017-11-10 08:43:57,488: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=485
+DEBUG 2017-11-10 08:43:57,551: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=486
+DEBUG 2017-11-10 08:43:57,616: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=482
+DEBUG 2017-11-10 08:43:57,677: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=489
+DEBUG 2017-11-10 08:43:57,739: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=492> (referer: None)
+DEBUG 2017-11-10 08:43:57,742: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=494> (referer: None)
+DEBUG 2017-11-10 08:43:57,760: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=491> (referer: None)
+DEBUG 2017-11-10 08:43:57,842: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=492
+DEBUG 2017-11-10 08:43:57,912: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=496> (referer: None)
+DEBUG 2017-11-10 08:43:57,912: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=494
+DEBUG 2017-11-10 08:43:57,968: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=491
+DEBUG 2017-11-10 08:43:58,039: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=490> (referer: None)
+DEBUG 2017-11-10 08:43:58,042: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=496
+DEBUG 2017-11-10 08:43:58,144: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=490
+DEBUG 2017-11-10 08:43:58,276: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=497> (referer: None)
+DEBUG 2017-11-10 08:43:58,279: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=495> (referer: None)
+DEBUG 2017-11-10 08:43:58,321: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=498> (referer: None)
+DEBUG 2017-11-10 08:43:58,349: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=499> (referer: None)
+DEBUG 2017-11-10 08:43:58,373: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=500> (referer: None)
+DEBUG 2017-11-10 08:43:58,377: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=497
+DEBUG 2017-11-10 08:43:58,478: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=493> (referer: None)
+DEBUG 2017-11-10 08:43:58,479: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=495
+DEBUG 2017-11-10 08:43:58,571: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=498
+DEBUG 2017-11-10 08:43:58,649: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=499
+DEBUG 2017-11-10 08:43:58,711: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=500
+DEBUG 2017-11-10 08:43:58,774: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=502> (referer: None)
+DEBUG 2017-11-10 08:43:58,779: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=501> (referer: None)
+DEBUG 2017-11-10 08:43:58,782: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=493
+DEBUG 2017-11-10 08:43:58,879: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=502
+DEBUG 2017-11-10 08:43:58,943: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=506> (referer: None)
+DEBUG 2017-11-10 08:43:58,944: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=501
+DEBUG 2017-11-10 08:43:59,010: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=505> (referer: None)
+DEBUG 2017-11-10 08:43:59,015: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=503> (referer: None)
+DEBUG 2017-11-10 08:43:59,047: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=507> (referer: None)
+DEBUG 2017-11-10 08:43:59,048: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=506
+DEBUG 2017-11-10 08:43:59,125: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=505
+DEBUG 2017-11-10 08:43:59,183: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=503
+DEBUG 2017-11-10 08:43:59,245: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=504> (referer: None)
+DEBUG 2017-11-10 08:43:59,246: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=507
+DEBUG 2017-11-10 08:43:59,350: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=504
+DEBUG 2017-11-10 08:43:59,459: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=510> (referer: None)
+DEBUG 2017-11-10 08:43:59,517: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=508> (referer: None)
+DEBUG 2017-11-10 08:43:59,565: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=511> (referer: None)
+DEBUG 2017-11-10 08:43:59,566: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=510
+DEBUG 2017-11-10 08:43:59,643: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=509> (referer: None)
+DEBUG 2017-11-10 08:43:59,646: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=514> (referer: None)
+DEBUG 2017-11-10 08:43:59,649: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=512> (referer: None)
+DEBUG 2017-11-10 08:43:59,653: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=513> (referer: None)
+DEBUG 2017-11-10 08:43:59,653: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=508
+DEBUG 2017-11-10 08:43:59,733: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=511
+DEBUG 2017-11-10 08:43:59,803: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=509
+DEBUG 2017-11-10 08:43:59,861: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=514
+DEBUG 2017-11-10 08:43:59,923: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=512
+DEBUG 2017-11-10 08:43:59,985: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=513
+DEBUG 2017-11-10 08:44:00,164: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=517> (referer: None)
+DEBUG 2017-11-10 08:44:00,182: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=516> (referer: None)
+DEBUG 2017-11-10 08:44:00,216: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=518> (referer: None)
+DEBUG 2017-11-10 08:44:00,268: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=517
+DEBUG 2017-11-10 08:44:00,340: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=520> (referer: None)
+DEBUG 2017-11-10 08:44:00,344: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=521> (referer: None)
+DEBUG 2017-11-10 08:44:00,347: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=522> (referer: None)
+DEBUG 2017-11-10 08:44:00,347: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=516
+DEBUG 2017-11-10 08:44:00,408: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=518
+DEBUG 2017-11-10 08:44:00,496: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=519> (referer: None)
+DEBUG 2017-11-10 08:44:00,499: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=515> (referer: None)
+DEBUG 2017-11-10 08:44:00,501: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=520
+DEBUG 2017-11-10 08:44:00,564: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=521
+DEBUG 2017-11-10 08:44:00,628: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=522
+DEBUG 2017-11-10 08:44:00,691: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=519
+DEBUG 2017-11-10 08:44:00,761: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=515
+DEBUG 2017-11-10 08:44:00,834: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=524> (referer: None)
+DEBUG 2017-11-10 08:44:00,936: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=524
+DEBUG 2017-11-10 08:44:01,044: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=525> (referer: None)
+DEBUG 2017-11-10 08:44:01,071: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=528> (referer: None)
+DEBUG 2017-11-10 08:44:01,147: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=525
+DEBUG 2017-11-10 08:44:01,215: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=528
+DEBUG 2017-11-10 08:44:01,294: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=529> (referer: None)
+DEBUG 2017-11-10 08:44:01,318: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=523> (referer: None)
+DEBUG 2017-11-10 08:44:01,397: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=529
+DEBUG 2017-11-10 08:44:01,473: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=526> (referer: None)
+DEBUG 2017-11-10 08:44:01,476: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=531> (referer: None)
+DEBUG 2017-11-10 08:44:01,477: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=523
+DEBUG 2017-11-10 08:44:01,568: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=530> (referer: None)
+DEBUG 2017-11-10 08:44:01,574: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=526
+DEBUG 2017-11-10 08:44:01,637: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=531
+DEBUG 2017-11-10 08:44:01,699: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=527> (referer: None)
+DEBUG 2017-11-10 08:44:01,702: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=533> (referer: None)
+DEBUG 2017-11-10 08:44:01,703: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=530
+DEBUG 2017-11-10 08:44:01,803: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=527
+DEBUG 2017-11-10 08:44:01,877: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=533
+DEBUG 2017-11-10 08:44:01,955: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=534> (referer: None)
+DEBUG 2017-11-10 08:44:01,958: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=535> (referer: None)
+DEBUG 2017-11-10 08:44:02,001: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=532> (referer: None)
+DEBUG 2017-11-10 08:44:02,059: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=534
+DEBUG 2017-11-10 08:44:02,156: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=535
+DEBUG 2017-11-10 08:44:02,242: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=536> (referer: None)
+DEBUG 2017-11-10 08:44:02,246: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=537> (referer: None)
+DEBUG 2017-11-10 08:44:02,247: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=532
+DEBUG 2017-11-10 08:44:02,560: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=541> (referer: None)
+DEBUG 2017-11-10 08:44:02,563: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=539> (referer: None)
+DEBUG 2017-11-10 08:44:02,566: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=538> (referer: None)
+DEBUG 2017-11-10 08:44:02,569: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=540> (referer: None)
+DEBUG 2017-11-10 08:44:02,571: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=536
+DEBUG 2017-11-10 08:44:02,652: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=537
+DEBUG 2017-11-10 08:44:02,734: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=542> (referer: None)
+DEBUG 2017-11-10 08:44:02,738: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=543> (referer: None)
+DEBUG 2017-11-10 08:44:02,740: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=541
+DEBUG 2017-11-10 08:44:02,846: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=539
+DEBUG 2017-11-10 08:44:02,941: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=538
+DEBUG 2017-11-10 08:44:03,030: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=540
+DEBUG 2017-11-10 08:44:03,123: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=545> (referer: None)
+DEBUG 2017-11-10 08:44:03,123: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=542
+DEBUG 2017-11-10 08:44:03,194: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=543
+DEBUG 2017-11-10 08:44:03,330: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=546> (referer: None)
+DEBUG 2017-11-10 08:44:03,335: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=544> (referer: None)
+DEBUG 2017-11-10 08:44:03,339: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=547> (referer: None)
+DEBUG 2017-11-10 08:44:03,345: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=548> (referer: None)
+DEBUG 2017-11-10 08:44:03,354: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=549> (referer: None)
+DEBUG 2017-11-10 08:44:03,357: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=545
+DEBUG 2017-11-10 08:44:03,438: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=546
+DEBUG 2017-11-10 08:44:03,499: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=544
+DEBUG 2017-11-10 08:44:03,571: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=547
+DEBUG 2017-11-10 08:44:03,642: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=548
+DEBUG 2017-11-10 08:44:03,706: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=549
+DEBUG 2017-11-10 08:44:03,767: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=551> (referer: None)
+DEBUG 2017-11-10 08:44:03,870: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=551
+DEBUG 2017-11-10 08:44:03,966: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=550> (referer: None)
+DEBUG 2017-11-10 08:44:03,974: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=552> (referer: None)
+DEBUG 2017-11-10 08:44:03,997: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=553> (referer: None)
+DEBUG 2017-11-10 08:44:04,072: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=554> (referer: None)
+DEBUG 2017-11-10 08:44:04,073: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=550
+DEBUG 2017-11-10 08:44:04,203: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=555> (referer: None)
+DEBUG 2017-11-10 08:44:04,206: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=552
+DEBUG 2017-11-10 08:44:04,290: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=553
+DEBUG 2017-11-10 08:44:04,366: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=554
+DEBUG 2017-11-10 08:44:04,444: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=558> (referer: None)
+DEBUG 2017-11-10 08:44:04,447: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=556> (referer: None)
+DEBUG 2017-11-10 08:44:04,451: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=557> (referer: None)
+DEBUG 2017-11-10 08:44:04,455: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=555
+DEBUG 2017-11-10 08:44:04,536: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=560> (referer: None)
+DEBUG 2017-11-10 08:44:04,545: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=558
+DEBUG 2017-11-10 08:44:04,608: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=561> (referer: None)
+DEBUG 2017-11-10 08:44:04,608: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=556
+DEBUG 2017-11-10 08:44:04,669: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=557
+DEBUG 2017-11-10 08:44:04,745: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=559> (referer: None)
+DEBUG 2017-11-10 08:44:04,746: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=560
+DEBUG 2017-11-10 08:44:04,808: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=561
+DEBUG 2017-11-10 08:44:04,868: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=562> (referer: None)
+DEBUG 2017-11-10 08:44:04,870: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=559
+DEBUG 2017-11-10 08:44:04,970: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=562
+DEBUG 2017-11-10 08:44:05,141: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=567> (referer: None)
+DEBUG 2017-11-10 08:44:05,146: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=564> (referer: None)
+DEBUG 2017-11-10 08:44:05,150: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=565> (referer: None)
+DEBUG 2017-11-10 08:44:05,156: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=566> (referer: None)
+DEBUG 2017-11-10 08:44:05,245: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=567
+DEBUG 2017-11-10 08:44:05,313: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=564
+DEBUG 2017-11-10 08:44:05,384: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=565
+DEBUG 2017-11-10 08:44:05,442: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=566
+DEBUG 2017-11-10 08:44:05,506: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=563> (referer: None)
+DEBUG 2017-11-10 08:44:05,510: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=569> (referer: None)
+DEBUG 2017-11-10 08:44:05,609: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=563
+DEBUG 2017-11-10 08:44:05,677: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=568> (referer: None)
+DEBUG 2017-11-10 08:44:05,681: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=570> (referer: None)
+DEBUG 2017-11-10 08:44:05,681: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=569
+INFO 2017-11-10 08:44:05,756: Crawled 570 pages (at 570 pages/min), scraped 0 items (at 0 items/min)
+DEBUG 2017-11-10 08:44:05,761: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=572> (referer: None)
+DEBUG 2017-11-10 08:44:05,767: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=571> (referer: None)
+DEBUG 2017-11-10 08:44:05,776: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=574> (referer: None)
+DEBUG 2017-11-10 08:44:05,786: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=573> (referer: None)
+DEBUG 2017-11-10 08:44:05,786: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=568
+DEBUG 2017-11-10 08:44:05,853: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=570
+DEBUG 2017-11-10 08:44:05,922: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=572
+DEBUG 2017-11-10 08:44:05,989: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=571
+DEBUG 2017-11-10 08:44:06,118: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=574
+DEBUG 2017-11-10 08:44:06,218: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=573
+DEBUG 2017-11-10 08:44:06,331: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=575> (referer: None)
+DEBUG 2017-11-10 08:44:06,340: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=576> (referer: None)
+DEBUG 2017-11-10 08:44:06,360: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=577> (referer: None)
+DEBUG 2017-11-10 08:44:06,365: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=579> (referer: None)
+DEBUG 2017-11-10 08:44:06,374: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=581> (referer: None)
+DEBUG 2017-11-10 08:44:06,394: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=578> (referer: None)
+DEBUG 2017-11-10 08:44:06,409: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=580> (referer: None)
+DEBUG 2017-11-10 08:44:06,433: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=575
+DEBUG 2017-11-10 08:44:06,531: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=582> (referer: None)
+DEBUG 2017-11-10 08:44:06,532: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=576
+DEBUG 2017-11-10 08:44:06,598: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=577
+DEBUG 2017-11-10 08:44:06,669: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=579
+DEBUG 2017-11-10 08:44:06,738: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=581
+DEBUG 2017-11-10 08:44:06,813: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=578
+DEBUG 2017-11-10 08:44:06,992: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=580
+DEBUG 2017-11-10 08:44:07,099: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=588> (referer: None)
+DEBUG 2017-11-10 08:44:07,103: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=583> (referer: None)
+DEBUG 2017-11-10 08:44:07,107: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=584> (referer: None)
+DEBUG 2017-11-10 08:44:07,110: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=586> (referer: None)
+DEBUG 2017-11-10 08:44:07,114: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=589> (referer: None)
+DEBUG 2017-11-10 08:44:07,118: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=582
+DEBUG 2017-11-10 08:44:07,191: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=585> (referer: None)
+DEBUG 2017-11-10 08:44:07,200: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=588
+DEBUG 2017-11-10 08:44:07,294: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=587> (referer: None)
+DEBUG 2017-11-10 08:44:07,295: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=583
+DEBUG 2017-11-10 08:44:07,370: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=584
+DEBUG 2017-11-10 08:44:07,442: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=586
+DEBUG 2017-11-10 08:44:07,510: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=589
+DEBUG 2017-11-10 08:44:07,576: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=585
+DEBUG 2017-11-10 08:44:07,638: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=587
+DEBUG 2017-11-10 08:44:07,717: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=590> (referer: None)
+DEBUG 2017-11-10 08:44:07,736: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=596> (referer: None)
+DEBUG 2017-11-10 08:44:07,760: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=592> (referer: None)
+DEBUG 2017-11-10 08:44:07,787: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=591> (referer: None)
+DEBUG 2017-11-10 08:44:07,796: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=593> (referer: None)
+DEBUG 2017-11-10 08:44:07,812: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=594> (referer: None)
+DEBUG 2017-11-10 08:44:07,818: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=590
+DEBUG 2017-11-10 08:44:07,889: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=595> (referer: None)
+DEBUG 2017-11-10 08:44:07,890: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=596
+DEBUG 2017-11-10 08:44:07,944: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=592
+DEBUG 2017-11-10 08:44:08,018: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=591
+DEBUG 2017-11-10 08:44:08,082: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=593
+DEBUG 2017-11-10 08:44:08,140: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=594
+DEBUG 2017-11-10 08:44:08,233: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=595
+DEBUG 2017-11-10 08:44:08,327: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=599> (referer: None)
+DEBUG 2017-11-10 08:44:08,333: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=601> (referer: None)
+DEBUG 2017-11-10 08:44:08,336: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=600> (referer: None)
+DEBUG 2017-11-10 08:44:08,341: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=597> (referer: None)
+DEBUG 2017-11-10 08:44:08,358: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=602> (referer: None)
+DEBUG 2017-11-10 08:44:08,431: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=599
+DEBUG 2017-11-10 08:44:08,508: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=601
+DEBUG 2017-11-10 08:44:08,583: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=600
+DEBUG 2017-11-10 08:44:08,674: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=597
+DEBUG 2017-11-10 08:44:08,772: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=602
+DEBUG 2017-11-10 08:44:08,846: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=603> (referer: None)
+DEBUG 2017-11-10 08:44:08,849: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=598> (referer: None)
+DEBUG 2017-11-10 08:44:08,852: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=604> (referer: None)
+DEBUG 2017-11-10 08:44:08,891: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=607> (referer: None)
+DEBUG 2017-11-10 08:44:08,938: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=609> (referer: None)
+DEBUG 2017-11-10 08:44:08,946: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=603
+DEBUG 2017-11-10 08:44:09,036: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=605> (referer: None)
+DEBUG 2017-11-10 08:44:09,042: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=606> (referer: None)
+DEBUG 2017-11-10 08:44:09,042: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=598
+DEBUG 2017-11-10 08:44:09,114: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=604
+DEBUG 2017-11-10 08:44:09,172: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=607
+DEBUG 2017-11-10 08:44:09,265: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=609
+DEBUG 2017-11-10 08:44:09,409: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=610> (referer: None)
+DEBUG 2017-11-10 08:44:09,414: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=608> (referer: None)
+DEBUG 2017-11-10 08:44:09,416: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=605
+DEBUG 2017-11-10 08:44:09,483: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=606
+DEBUG 2017-11-10 08:44:09,558: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=613> (referer: None)
+DEBUG 2017-11-10 08:44:09,562: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=614> (referer: None)
+DEBUG 2017-11-10 08:44:09,565: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=611> (referer: None)
+DEBUG 2017-11-10 08:44:09,568: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=612> (referer: None)
+DEBUG 2017-11-10 08:44:09,570: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=610
+DEBUG 2017-11-10 08:44:09,628: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=608
+DEBUG 2017-11-10 08:44:09,691: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=613
+DEBUG 2017-11-10 08:44:09,761: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=614
+DEBUG 2017-11-10 08:44:09,834: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=611
+DEBUG 2017-11-10 08:44:10,149: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=612
+DEBUG 2017-11-10 08:44:10,213: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=615> (referer: None)
+DEBUG 2017-11-10 08:44:10,216: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=616> (referer: None)
+DEBUG 2017-11-10 08:44:10,219: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=617> (referer: None)
+DEBUG 2017-11-10 08:44:10,221: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=618> (referer: None)
+DEBUG 2017-11-10 08:44:10,278: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=621> (referer: None)
+DEBUG 2017-11-10 08:44:10,318: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=615
+DEBUG 2017-11-10 08:44:10,389: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=616
+DEBUG 2017-11-10 08:44:10,462: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=619> (referer: None)
+DEBUG 2017-11-10 08:44:10,465: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=620> (referer: None)
+DEBUG 2017-11-10 08:44:10,466: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=617
+DEBUG 2017-11-10 08:44:10,524: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=618
+DEBUG 2017-11-10 08:44:10,581: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=621
+DEBUG 2017-11-10 08:44:10,652: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=622> (referer: None)
+DEBUG 2017-11-10 08:44:10,655: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=619
+DEBUG 2017-11-10 08:44:10,721: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=620
+DEBUG 2017-11-10 08:44:10,785: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=622
+DEBUG 2017-11-10 08:44:10,850: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=624> (referer: None)
+DEBUG 2017-11-10 08:44:10,853: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=627> (referer: None)
+DEBUG 2017-11-10 08:44:10,855: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=626> (referer: None)
+DEBUG 2017-11-10 08:44:10,950: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=624
+DEBUG 2017-11-10 08:44:11,033: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=623> (referer: None)
+DEBUG 2017-11-10 08:44:11,036: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=625> (referer: None)
+DEBUG 2017-11-10 08:44:11,036: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=627
+DEBUG 2017-11-10 08:44:11,092: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=626
+DEBUG 2017-11-10 08:44:11,151: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=623
+DEBUG 2017-11-10 08:44:11,212: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=625
+DEBUG 2017-11-10 08:44:11,279: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=628> (referer: None)
+DEBUG 2017-11-10 08:44:11,283: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=629> (referer: None)
+DEBUG 2017-11-10 08:44:11,337: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=630> (referer: None)
+DEBUG 2017-11-10 08:44:11,381: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=628
+DEBUG 2017-11-10 08:44:11,449: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=633> (referer: None)
+DEBUG 2017-11-10 08:44:11,450: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=629
+DEBUG 2017-11-10 08:44:11,550: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=630
+DEBUG 2017-11-10 08:44:11,630: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=631> (referer: None)
+DEBUG 2017-11-10 08:44:11,633: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=632> (referer: None)
+DEBUG 2017-11-10 08:44:11,635: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=633
+DEBUG 2017-11-10 08:44:11,702: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=634> (referer: None)
+DEBUG 2017-11-10 08:44:11,731: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=631
+DEBUG 2017-11-10 08:44:11,802: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=635> (referer: None)
+DEBUG 2017-11-10 08:44:11,803: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=632
+DEBUG 2017-11-10 08:44:11,872: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=636> (referer: None)
+DEBUG 2017-11-10 08:44:11,876: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=638> (referer: None)
+DEBUG 2017-11-10 08:44:11,876: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=634
+DEBUG 2017-11-10 08:44:11,947: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=637> (referer: None)
+DEBUG 2017-11-10 08:44:11,947: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=635
+DEBUG 2017-11-10 08:44:12,027: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=636
+DEBUG 2017-11-10 08:44:12,089: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=638
+DEBUG 2017-11-10 08:44:12,149: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=637
+DEBUG 2017-11-10 08:44:12,307: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=639> (referer: None)
+DEBUG 2017-11-10 08:44:12,312: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=640> (referer: None)
+DEBUG 2017-11-10 08:44:12,316: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=641> (referer: None)
+DEBUG 2017-11-10 08:44:12,322: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=642> (referer: None)
+DEBUG 2017-11-10 08:44:12,413: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=639
+DEBUG 2017-11-10 08:44:12,477: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=640
+DEBUG 2017-11-10 08:44:12,544: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=641
+DEBUG 2017-11-10 08:44:12,615: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=642
+DEBUG 2017-11-10 08:44:12,677: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=644> (referer: None)
+DEBUG 2017-11-10 08:44:12,680: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=646> (referer: None)
+DEBUG 2017-11-10 08:44:12,684: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=643> (referer: None)
+DEBUG 2017-11-10 08:44:12,688: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=645> (referer: None)
+DEBUG 2017-11-10 08:44:12,782: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=644
+DEBUG 2017-11-10 08:44:12,851: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=646
+DEBUG 2017-11-10 08:44:12,913: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=643
+DEBUG 2017-11-10 08:44:12,971: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=645
+DEBUG 2017-11-10 08:44:13,042: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=650> (referer: None)
+DEBUG 2017-11-10 08:44:13,046: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=647> (referer: None)
+DEBUG 2017-11-10 08:44:13,148: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=650
+DEBUG 2017-11-10 08:44:13,236: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=647
+DEBUG 2017-11-10 08:44:13,349: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=651> (referer: None)
+DEBUG 2017-11-10 08:44:13,352: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=652> (referer: None)
+DEBUG 2017-11-10 08:44:13,385: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=648> (referer: None)
+DEBUG 2017-11-10 08:44:13,407: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=654> (referer: None)
+DEBUG 2017-11-10 08:44:13,453: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=651
+DEBUG 2017-11-10 08:44:13,523: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=652
+DEBUG 2017-11-10 08:44:13,600: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=649> (referer: None)
+DEBUG 2017-11-10 08:44:13,601: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=648
+DEBUG 2017-11-10 08:44:13,671: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=654
+DEBUG 2017-11-10 08:44:13,741: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=656> (referer: None)
+DEBUG 2017-11-10 08:44:13,743: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=649
+DEBUG 2017-11-10 08:44:13,842: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=656
+DEBUG 2017-11-10 08:44:14,049: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=655> (referer: None)
+DEBUG 2017-11-10 08:44:14,054: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=659> (referer: None)
+DEBUG 2017-11-10 08:44:14,071: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=660> (referer: None)
+DEBUG 2017-11-10 08:44:14,088: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=658> (referer: None)
+DEBUG 2017-11-10 08:44:14,152: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=655
+DEBUG 2017-11-10 08:44:14,227: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=657> (referer: None)
+DEBUG 2017-11-10 08:44:14,227: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=659
+DEBUG 2017-11-10 08:44:14,313: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=660
+DEBUG 2017-11-10 08:44:14,380: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=658
+DEBUG 2017-11-10 08:44:14,447: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=662> (referer: None)
+DEBUG 2017-11-10 08:44:14,449: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=657
+DEBUG 2017-11-10 08:44:14,545: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=653> (referer: None)
+DEBUG 2017-11-10 08:44:14,548: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=662
+DEBUG 2017-11-10 08:44:14,619: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=664> (referer: None)
+DEBUG 2017-11-10 08:44:14,638: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=661> (referer: None)
+DEBUG 2017-11-10 08:44:14,647: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=653
+DEBUG 2017-11-10 08:44:14,731: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=666> (referer: None)
+DEBUG 2017-11-10 08:44:14,734: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=665> (referer: None)
+DEBUG 2017-11-10 08:44:14,734: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=664
+DEBUG 2017-11-10 08:44:14,812: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=663> (referer: None)
+DEBUG 2017-11-10 08:44:14,813: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=661
+DEBUG 2017-11-10 08:44:14,883: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=666
+DEBUG 2017-11-10 08:44:14,939: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=665
+DEBUG 2017-11-10 08:44:15,013: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=663
+DEBUG 2017-11-10 08:44:15,092: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=667> (referer: None)
+DEBUG 2017-11-10 08:44:15,118: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=668> (referer: None)
+DEBUG 2017-11-10 08:44:15,191: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=669> (referer: None)
+DEBUG 2017-11-10 08:44:15,194: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=667
+DEBUG 2017-11-10 08:44:15,286: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=670> (referer: None)
+DEBUG 2017-11-10 08:44:15,287: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=668
+DEBUG 2017-11-10 08:44:15,353: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=669
+DEBUG 2017-11-10 08:44:15,414: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=672> (referer: None)
+DEBUG 2017-11-10 08:44:15,415: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=670
+DEBUG 2017-11-10 08:44:15,475: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=673> (referer: None)
+DEBUG 2017-11-10 08:44:15,486: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=671> (referer: None)
+DEBUG 2017-11-10 08:44:15,501: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=674> (referer: None)
+DEBUG 2017-11-10 08:44:15,517: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=672
+DEBUG 2017-11-10 08:44:15,588: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=673
+DEBUG 2017-11-10 08:44:15,650: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=671
+DEBUG 2017-11-10 08:44:15,727: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=675> (referer: None)
+DEBUG 2017-11-10 08:44:15,728: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=674
+DEBUG 2017-11-10 08:44:15,802: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=677> (referer: None)
+DEBUG 2017-11-10 08:44:15,830: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=675
+DEBUG 2017-11-10 08:44:15,903: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=677
+DEBUG 2017-11-10 08:44:15,990: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=678> (referer: None)
+DEBUG 2017-11-10 08:44:15,995: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=681> (referer: None)
+DEBUG 2017-11-10 08:44:16,042: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=676> (referer: None)
+DEBUG 2017-11-10 08:44:16,086: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=679> (referer: None)
+DEBUG 2017-11-10 08:44:16,091: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=678
+DEBUG 2017-11-10 08:44:16,160: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=682> (referer: None)
+DEBUG 2017-11-10 08:44:16,164: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=680> (referer: None)
+DEBUG 2017-11-10 08:44:16,164: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=681
+DEBUG 2017-11-10 08:44:16,229: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=676
+DEBUG 2017-11-10 08:44:16,311: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=679
+DEBUG 2017-11-10 08:44:16,384: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=682
+DEBUG 2017-11-10 08:44:16,463: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=680
+DEBUG 2017-11-10 08:44:16,533: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=683> (referer: None)
+DEBUG 2017-11-10 08:44:16,536: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=684> (referer: None)
+DEBUG 2017-11-10 08:44:16,594: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=687> (referer: None)
+DEBUG 2017-11-10 08:44:16,634: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=683
+DEBUG 2017-11-10 08:44:16,741: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=685> (referer: None)
+DEBUG 2017-11-10 08:44:16,742: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=684
+DEBUG 2017-11-10 08:44:16,816: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=687
+DEBUG 2017-11-10 08:44:16,888: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=686> (referer: None)
+DEBUG 2017-11-10 08:44:16,893: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=690> (referer: None)
+DEBUG 2017-11-10 08:44:16,897: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=685
+DEBUG 2017-11-10 08:44:16,980: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=689> (referer: None)
+DEBUG 2017-11-10 08:44:16,992: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=688> (referer: None)
+DEBUG 2017-11-10 08:44:16,997: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=686
+DEBUG 2017-11-10 08:44:17,073: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=690
+DEBUG 2017-11-10 08:44:17,142: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=691> (referer: None)
+DEBUG 2017-11-10 08:44:17,145: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=692> (referer: None)
+DEBUG 2017-11-10 08:44:17,148: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=693> (referer: None)
+DEBUG 2017-11-10 08:44:17,151: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=689
+DEBUG 2017-11-10 08:44:17,220: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=688
+DEBUG 2017-11-10 08:44:17,325: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=691
+DEBUG 2017-11-10 08:44:17,395: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=692
+DEBUG 2017-11-10 08:44:17,463: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=693
+DEBUG 2017-11-10 08:44:17,527: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=694> (referer: None)
+DEBUG 2017-11-10 08:44:17,531: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=695> (referer: None)
+DEBUG 2017-11-10 08:44:17,604: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=696> (referer: None)
+DEBUG 2017-11-10 08:44:17,631: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=694
+DEBUG 2017-11-10 08:44:17,726: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=695
+DEBUG 2017-11-10 08:44:17,791: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=698> (referer: None)
+DEBUG 2017-11-10 08:44:17,792: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=696
+DEBUG 2017-11-10 08:44:17,854: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=697> (referer: None)
+DEBUG 2017-11-10 08:44:17,875: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=699> (referer: None)
+DEBUG 2017-11-10 08:44:17,894: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=698
+DEBUG 2017-11-10 08:44:18,001: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=700> (referer: None)
+DEBUG 2017-11-10 08:44:18,002: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=697
+DEBUG 2017-11-10 08:44:18,278: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=699
+DEBUG 2017-11-10 08:44:18,348: Crawled (200) <GET http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=701> (referer: None)
+DEBUG 2017-11-10 08:44:18,350: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=700
+DEBUG 2017-11-10 08:44:18,449: parse_all url:http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=701
+INFO 2017-11-10 08:44:18,517: Closing spider (finished)
+INFO 2017-11-10 08:44:18,518: Dumping Scrapy stats:
+{'downloader/request_bytes': 379905,
+ 'downloader/request_count': 701,
+ 'downloader/request_method_count/GET': 701,
+ 'downloader/response_bytes': 14472107,
+ 'downloader/response_count': 701,
+ 'downloader/response_status_count/200': 701,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 11, 10, 0, 44, 18, 517926),
+ 'log_count/DEBUG': 1408,
+ 'log_count/INFO': 8,
+ 'memusage/max': 221200384,
+ 'memusage/startup': 68804608,
+ 'response_received_count': 701,
+ 'scheduler/dequeued': 701,
+ 'scheduler/dequeued/memory': 701,
+ 'scheduler/enqueued': 701,
+ 'scheduler/enqueued/memory': 701,
+ 'start_time': datetime.datetime(2017, 11, 10, 0, 43, 5, 625509)}
+INFO 2017-11-10 08:44:18,518: Spider closed (finished)
