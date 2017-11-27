@@ -13,7 +13,7 @@ from sqlhelper import SqlHelper
 class GameUrls(Spider):
     name = 'game_urls'
 
-    start_urls = ['http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=%s' % n for n in range(1, 702)]
+    start_urls = ['http://store.steampowered.com/search/?sort_by=Released_DESC&category1=998&page=%s' % n for n in range(1, 703)]
 
     def __init__(self, *a, **kw):
         super(GameUrls, self).__init__(*a, **kw)
